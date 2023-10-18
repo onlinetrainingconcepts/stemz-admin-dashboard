@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'DM Sans', sans-serif;
+}
+
+.admin-dashboard {
+	height: 100vh;
+}
+
+.admin-dashboard__header {
+	display: flex;
+	height: 100px;
+	padding: 28px;
+	justify-content: space-between;
+	align-items: center;
+	flex-shrink: 0;
+	background: #fbf5f2;
+}
+
+.user-notifications {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.admin-dashboard__user-img {
+	height: 54px;
+	width: 54px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.admin-dashboard__nav-content {
+	display: flex;
+	height: 100%;
+}
+
+.admin-dashboard__nav {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 348px;
+	background: #efe9e8;
+}
+
+/* || dashboard panel */
+
+.dashboard__nav--button {
+	background-color: #efe9e8;
+	color: #233235;
+	height: 46px;
+	border: none;
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	padding-left: 19px;
+	cursor: pointer;
+	position: relative;
+	font-family: 'DM Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.dashboard__nav--button:focus {
+	outline: none;
+}
+
+.dashboard__nav--button:focus-visible {
+	outline: 2px solid #007d7a;
+	z-index: 100;
+}
+
+/* hover button styles */
+.dashboard__nav--button:hover:not(.active),
+.dashboard__nav--button:focus:not(.active) {
+	color: #233235;
+	background-color: rgba(251, 245, 242, 1);
+}
+
+.dashboard__nav--button.active:hover {
+	color: #233235;
+}
+
+/* applies left border to nav button on hover */
+.dashboard__nav--button:hover:not(.active):after {
+	content: '';
+	width: 6px;
+	height: 100%;
+	background-color: #f1d7cc;
+	position: absolute;
+	left: 0;
+}

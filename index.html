@@ -8,7 +8,89 @@
 		<title>Stemz Admin Dashboard</title>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="app">
+			<div class="container">
+				<div class="admin-dashboard">
+					<header class="admin-dashboard__header">
+						<span>STEMZ</span>
+						<div class="user-notifications">
+							<div class="profile-pic">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									alt=""
+									class="admin-dashboard__user-img"
+								/>
+							</div>
+							<div class="notifications">notifications</div>
+						</div>
+					</header>
+
+					<div class="admin-dashboard__nav-content">
+						<nav class="admin-dashboard__nav">
+							<button class="dashboard__nav--button" data-for-tab="1">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span class="dashboard__nav--button-text">Home</span>
+							</button>
+							<button class="dashboard__nav--button" data-for-tab="2">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span class="dashboard__nav--button-text">CRMs</span>
+								<button class="dashboard__nav--button" data-for-tab="3">
+									<img
+										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+										height="20"
+										width="20"
+										alt=""
+										class="dashboard__nav--icon"
+									/>
+									<span class="dashboard__nav--button-text">Financial</span>
+								</button>
+								<button class="dashboard__nav--button" data-for-tab="4">
+									<img
+										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+										height="20"
+										width="20"
+										alt=""
+										class="dashboard__nav--icon"
+									/>
+									<span class="dashboard__nav--button-text">Inventory</span>
+								</button>
+								<button class="dashboard__nav--button" data-for-tab="5">
+									<img
+										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+										height="20"
+										width="20"
+										alt=""
+										class="dashboard__nav--icon"
+									/>
+									<span class="dashboard__nav--button-text">Orders</span>
+								</button>
+							</button>
+						</nav>
+						<main class="admin-dashboard__content">
+							<div id="home" class="tabcontent" data-tab="1">Home</div>
+							<div id="crms" class="tabcontent" data-tab="2">CRMs</div>
+							<div id="financial" class="tabcontent" data-tab="3">
+								Financial
+							</div>
+							<div id="inventory" class="tabcontent" data-tab="4">Inventor</div>
+							<div id="orders" class="tabcontent" data-tab="5">Orders</div>
+						</main>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>
