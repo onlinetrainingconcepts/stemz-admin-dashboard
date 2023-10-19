@@ -6,10 +6,24 @@ body {
 	font-family: 'DM Sans', sans-serif;
 }
 
-.admin-dashboard {
-	height: 100vh;
+.admin-dashboard * {
+	box-sizing: border-box;
 }
 
+/* ||| global positioning */
+
+.admin-dashboard {
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-dashboard__nav-content {
+	display: flex;
+	flex: 1;
+}
+
+/* || header */
 .admin-dashboard__header {
 	display: flex;
 	height: 100px;
@@ -33,10 +47,7 @@ body {
 	object-fit: cover;
 }
 
-.admin-dashboard__nav-content {
-	display: flex;
-	height: 100%;
-}
+/* || dashboard panel */
 
 .admin-dashboard__nav {
 	display: flex;
@@ -46,7 +57,7 @@ body {
 	background: #efe9e8;
 }
 
-/* || dashboard panel */
+/* || buttons and interactions */
 
 .dashboard__nav--button {
 	background-color: #efe9e8;
@@ -92,4 +103,43 @@ body {
 	background-color: #f1d7cc;
 	position: absolute;
 	left: 0;
+}
+
+/* | active button styles */
+.dashboard__nav--button.active {
+	background-color: #bfdede;
+	color: #233235;
+}
+
+/* active border */
+.dashboard__nav--button.active:before {
+	content: '';
+	width: 6px;
+	height: 100%;
+	background-color: rgba(0, 125, 122, 1);
+	position: absolute;
+	left: 0;
+}
+
+/* active arrow */
+.dashboard__nav--button.active:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	border-width: 14px;
+	border-style: solid;
+	border-right-color: #fff;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	z-index: 100;
+}
+
+.tabcontent {
+	display: none;
+}
+
+.tabcontent--active {
+	display: block;
 }
