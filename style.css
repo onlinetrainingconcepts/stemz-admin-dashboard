@@ -34,17 +34,48 @@ body {
 	background: #fbf5f2;
 }
 
-.user-notifications {
+.admin-dashboard__user-notifications {
 	display: flex;
 	align-items: center;
 	gap: 24px;
 }
 
-.admin-dashboard__user-img {
+.admin-dashboard__profile-pic,
+.admin-dashboard__notifications {
 	height: 54px;
 	width: 54px;
 	border-radius: 50%;
+	overflow: hidden;
+}
+
+.admin-dashboard__user-img {
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
+}
+
+.admin-dashboard__notifications {
+	background-color: rgba(241, 215, 204, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.admin-dashboard__notification-bubble {
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	outline: 2px solid rgba(241, 215, 204, 1);
+	background-color: rgba(222, 90, 97, 1);
+	color: #fff;
+	font-size: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 15px;
+	right: 9px;
 }
 
 /* || dashboard panel */
