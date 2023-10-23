@@ -21,22 +21,16 @@ class AdminDashboard {
 	initiateDashboard(buttons) {
 		buttons.forEach((button) => {
 			button.addEventListener('click', () => {
-				const tabNumber = button.dataset.forTab;
-				const tabToActivate = this.contentContainer.querySelector(
-					`.tabcontent[data-tab="${tabNumber}"]`
-				);
+				const accordionContent = button.nextElementSibling;
 
-				this.navButtons.forEach((button) => {
-					button.classList.remove('active');
-				});
+				button.classList.toggle('active');
 
-				this.contentContainer.querySelectorAll('.tabcontent').forEach((tab) => {
-					tab.classList.remove('tabcontent--active');
-				});
-
-				button.classList.add('active');
-
-				tabToActivate.classList.add('tabcontent--active');
+				// adds active class to accordion content upon click
+				if (button.classList.contains('active')) {
+					accordionContent.classList.add('active');
+				} else {
+					accordionContent.classList.remove('active');
+				}
 			});
 		});
 	}

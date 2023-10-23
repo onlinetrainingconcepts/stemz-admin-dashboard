@@ -32,56 +32,55 @@
 
 					<div class="admin-dashboard__nav-content">
 						<nav class="admin-dashboard__nav">
-							<button class="dashboard__nav--button" data-for-tab="1">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span class="dashboard__nav--button-text">Home</span>
-							</button>
-							<button class="dashboard__nav--button" data-for-tab="2">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span class="dashboard__nav--button-text">CRMs</span>
-							</button>
-							<button class="dashboard__nav--button" data-for-tab="3">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span class="dashboard__nav--button-text">Financial</span>
-							</button>
-							<button class="dashboard__nav--button" data-for-tab="4">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span class="dashboard__nav--button-text">Inventory</span>
-							</button>
-							<button class="dashboard__nav--button" data-for-tab="5">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span class="dashboard__nav--button-text">Orders</span>
-							</button>
+							<div class="admin-dashboard__accordion">
+								<button class="dashboard__nav--button">
+									<img
+										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+										height="20"
+										width="20"
+										alt=""
+										class="dashboard__nav--icon"
+									/>
+									<span class="dashboard__nav--button-text">Inventory</span>
+								</button>
+								<div class="admin-dashboard__accordion-content">
+									<button class="dashboard__accordion--button active">
+										<span class="dashboard__nav--button-text"
+											>All inventory</span
+										>
+									</button>
+									<button class="dashboard__accordion--button">
+										<span class="dashboard__nav--button-text"
+											>Add new product</span
+										>
+									</button>
+								</div>
+								<button class="dashboard__nav--button">
+									<img
+										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+										height="20"
+										width="20"
+										alt=""
+										class="dashboard__nav--icon"
+									/>
+									<span class="dashboard__nav--button-text">Orders</span>
+								</button>
+								<div class="admin-dashboard__accordion-content">
+									<button class="dashboard__accordion--button active">
+										<span class="dashboard__nav--button-text"
+											>Current Sales Cycle</span
+										>
+									</button>
+									<button class="dashboard__accordion--button">
+										<span class="dashboard__nav--button-text">Future PAOs</span>
+									</button>
+									<button class="dashboard__accordion--button">
+										<span class="dashboard__nav--button-text"
+											>Standing Orders</span
+										>
+									</button>
+								</div>
+							</div>
 						</nav>
 						<main class="admin-dashboard__content">
 							<div id="home" class="tabcontent" data-tab="1">Home</div>
