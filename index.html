@@ -32,26 +32,53 @@
 
 					<div class="admin-dashboard__nav-content">
 						<nav class="admin-dashboard__nav">
-							<button class="dashboard__nav--button" data-for-tab="1">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span class="dashboard__nav--button-text">Home</span>
-							</button>
-							<button class="dashboard__nav--button" data-for-tab="2">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span class="dashboard__nav--button-text">CRMs</span>
-								<button class="dashboard__nav--button" data-for-tab="3">
+							<div class="admin-dashboard__accordion">
+								<!-- Home -->
+								<button class="dashboard__nav--button">
+									<img
+										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+										height="20"
+										width="20"
+										alt=""
+										class="dashboard__nav--icon"
+									/>
+									<span class="dashboard__nav--button-text">Home</span>
+								</button>
+								<div class="admin-dashboard__accordion-content">
+									<button
+										class="dashboard__accordion--button active"
+										data-for-tab="1"
+									>
+										<span class="dashboard__nav--button-text"
+											>Weeklyl Logistics Overview</span
+										>
+									</button>
+								</div>
+								<!-- CRMs -->
+								<button class="dashboard__nav--button">
+									<img
+										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+										height="20"
+										width="20"
+										alt=""
+										class="dashboard__nav--icon"
+									/>
+									<span class="dashboard__nav--button-text">CRMs</span>
+								</button>
+								<div class="admin-dashboard__accordion-content">
+									<button
+										class="dashboard__accordion--button active"
+										data-for-tab="2"
+									>
+										<span class="dashboard__nav--button-text">Buyer</span>
+									</button>
+									<button class="dashboard__accordion--button" data-for-tab="3">
+										<span class="dashboard__nav--button-text">Farmer</span>
+									</button>
+								</div>
+
+								<!-- Financial -->
+								<button class="dashboard__nav--button">
 									<img
 										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
 										height="20"
@@ -61,7 +88,17 @@
 									/>
 									<span class="dashboard__nav--button-text">Financial</span>
 								</button>
-								<button class="dashboard__nav--button" data-for-tab="4">
+								<div class="admin-dashboard__accordion-content">
+									<button
+										class="dashboard__accordion--button active"
+										data-for-tab="4"
+									>
+										<span class="dashboard__nav--button-text">Financial</span>
+									</button>
+								</div>
+
+								<!-- Inventory -->
+								<button class="dashboard__nav--button">
 									<img
 										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
 										height="20"
@@ -71,7 +108,23 @@
 									/>
 									<span class="dashboard__nav--button-text">Inventory</span>
 								</button>
-								<button class="dashboard__nav--button" data-for-tab="5">
+								<div class="admin-dashboard__accordion-content">
+									<button
+										class="dashboard__accordion--button active"
+										data-for-tab="5"
+									>
+										<span class="dashboard__nav--button-text"
+											>All Inventory</span
+										>
+									</button>
+									<button class="dashboard__accordion--button" data-for-tab="6">
+										<span class="dashboard__nav--button-text"
+											>Add new product</span
+										>
+									</button>
+								</div>
+								<!-- Orders -->
+								<button class="dashboard__nav--button">
 									<img
 										src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
 										height="20"
@@ -81,16 +134,54 @@
 									/>
 									<span class="dashboard__nav--button-text">Orders</span>
 								</button>
-							</button>
+								<div class="admin-dashboard__accordion-content">
+									<button
+										class="dashboard__accordion--button active"
+										data-for-tab="7"
+									>
+										<span class="dashboard__nav--button-text"
+											>Current Sales Cycle</span
+										>
+									</button>
+									<button
+										class="dashboard__accordion--button active"
+										data-for-tab="8"
+									>
+										<span class="dashboard__nav--button-text">Future PAOs</span>
+									</button>
+									<button
+										class="dashboard__accordion--button active"
+										data-for-tab="9"
+									>
+										<span class="dashboard__nav--button-text"
+											>Standing Orders</span
+										>
+									</button>
+								</div>
+							</div>
 						</nav>
 						<main class="admin-dashboard__content">
-							<div id="home" class="tabcontent" data-tab="1">Home</div>
-							<div id="crms" class="tabcontent" data-tab="2">CRMs</div>
-							<div id="financial" class="tabcontent" data-tab="3">
+							<div id="home" class="tabcontent" data-tab="1">
+								Weekly Logistics Overview
+							</div>
+							<div id="crms" class="tabcontent" data-tab="2">Buyer</div>
+							<div id="financial" class="tabcontent" data-tab="3">Farmer</div>
+							<div id="inventory" class="tabcontent" data-tab="4">
 								Financial
 							</div>
-							<div id="inventory" class="tabcontent" data-tab="4">Inventor</div>
-							<div id="orders" class="tabcontent" data-tab="5">Orders</div>
+							<div id="orders" class="tabcontent" data-tab="5">
+								All Inventory
+							</div>
+							<div id="orders" class="tabcontent" data-tab="6">
+								Add new product
+							</div>
+							<div id="orders" class="tabcontent" data-tab="7">
+								Current Sales Cycle
+							</div>
+							<div id="orders" class="tabcontent" data-tab="8">Future PAOs</div>
+							<div id="orders" class="tabcontent" data-tab="9">
+								Standing Orders
+							</div>
 						</main>
 					</div>
 				</div>
