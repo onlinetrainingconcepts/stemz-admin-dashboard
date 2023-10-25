@@ -84,7 +84,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 348px;
+	width: 170px;
 	background: #efe9e8;
 }
 
@@ -217,4 +217,10 @@ body {
 
 .tabcontent--active {
 	display: block;
+}
+
+@media (min-width: 768px) {
+	.admin-dashboard__nav {
+		width: 348px;
+	}
 }
