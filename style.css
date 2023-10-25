@@ -90,22 +90,13 @@ body {
 
 /* || buttons and interactions */
 
-/* .dashboard__nav--button {
+.dashboard__nav--button {
 	background-color: #efe9e8;
-	color: #233235;
-	height: 46px;
-	width: 100%;
-	border: none;
-	display: flex;
-	gap: 15px;
-	align-items: center;
-	padding-left: 19px;
-	cursor: pointer;
-	position: relative;
-	font-family: 'DM Sans', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-} */
+}
+
+.dashboard__nav--button.active {
+	background-color: rgba(184, 209, 209, 1);
+}
 
 .dashboard__nav--button:focus {
 	outline: none;
@@ -191,14 +182,6 @@ body {
 	font-family: 'DM Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-}
-
-.dashboard__nav--button {
-	background-color: #efe9e8;
-}
-
-.dashboard__nav--button.active {
-	background-color: rgba(184, 209, 209, 1);
 }
 
 .dashboard__accordion--button {
