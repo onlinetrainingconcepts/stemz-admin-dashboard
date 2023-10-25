@@ -222,12 +222,16 @@ body {
 /* dashboard content */
 
 .admin-dashboard__content {
-	padding: 50px 120px;
+	padding: 50px;
 }
 
 /* ||| media queries */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 	.admin-dashboard__nav {
 		width: 348px;
+	}
+
+	.admin-dashboard__content {
+		padding: 50px 120px;
 	}
 }
