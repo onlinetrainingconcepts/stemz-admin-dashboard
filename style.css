@@ -94,10 +94,6 @@ body {
 	background-color: #efe9e8;
 }
 
-.dashboard__nav--button.active {
-	background-color: rgba(184, 209, 209, 1);
-}
-
 .dashboard__nav--button:focus {
 	outline: none;
 }
@@ -128,45 +124,6 @@ body {
 	left: 0;
 }
 
-/* | active button styles */
-.dashboard__nav--button.active {
-	/* background-color: #bfdede;
-	color: #233235; */
-}
-
-/* active border */
-.dashboard__nav--button.active:before {
-	content: '';
-	width: 6px;
-	height: 100%;
-	background-color: rgba(0, 125, 122, 1);
-	position: absolute;
-	left: 0;
-}
-
-/* active arrow */
-.dashboard__nav--button.active:after {
-	content: '';
-	display: block;
-	position: absolute;
-	right: 0;
-	border-width: 14px;
-	border-style: solid;
-	border-right-color: #fff;
-	border-bottom-color: transparent;
-	border-left-color: transparent;
-	border-top-color: transparent;
-	z-index: 100;
-}
-
-.tabcontent {
-	display: none;
-}
-
-.tabcontent--active {
-	display: block;
-}
-
 .admin-dashboard__accordion button {
 	/* background-color: #efe9e8; */
 	color: #233235;
@@ -182,6 +139,12 @@ body {
 	font-family: 'DM Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
+}
+
+/* || Accoridon buttons */
+
+.dashboard__nav--button.active {
+	background-color: rgba(184, 209, 209, 1);
 }
 
 .dashboard__accordion--button {
@@ -210,10 +173,48 @@ body {
 	left: 0;
 }
 
+/* | active button styles */
+
+/* active border */
+.dashboard__nav--button.active:before {
+	content: '';
+	width: 6px;
+	height: 100%;
+	background-color: rgba(0, 125, 122, 1);
+	position: absolute;
+	left: 0;
+}
+
+/* active arrow */
+.dashboard__nav--button.active:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	border-width: 14px;
+	border-style: solid;
+	border-right-color: #fff;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	z-index: 100;
+}
+
+/* ||| accordion content */
+
 .admin-dashboard__accordion-content {
 	display: none;
 }
 
 .admin-dashboard__accordion-content.active {
+	display: block;
+}
+
+/* ||| tabc content */
+.tabcontent {
+	display: none;
+}
+
+.tabcontent--active {
 	display: block;
 }
