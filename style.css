@@ -92,11 +92,11 @@ body {
 
 /* ## accordion content */
 
-.admin-dashboard__accordion-content {
-	/* display: none; */
+.accordion-content {
+	display: none;
 }
 
-.admin-dashboard__accordion-content.active {
+.accordion-content.active {
 	display: block;
 }
 

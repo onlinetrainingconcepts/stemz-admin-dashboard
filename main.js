@@ -2,9 +2,7 @@ class AdminDashboard {
 	constructor(dashboard, defaultTabIndex) {
 		this.dashboard = dashboard;
 		this.nav = this.dashboard.querySelector('.admin-dashboard__nav');
-		this.navButtons = this.dashboard.querySelectorAll(
-			'.dashboard__nav--button'
-		);
+		this.navButtons = this.dashboard.querySelectorAll('.dashboard__button');
 		this.contentContainer = this.dashboard.querySelector(
 			'.admin-dashboard__content'
 		);
@@ -50,7 +48,7 @@ class AdminDashboard {
 		const tabToActivate = this.contentContainer.querySelector(
 			`.tabcontent[data-tab="${tabNumber}"]`
 		);
-		this.removeClassAll(this.nav, '.dashboard__accordion--button', 'active');
+		this.removeClassAll(this.nav, '.dashboard__button.sub', 'active');
 		this.addClass(button, 'active');
 		this.removeClassAll(
 			this.contentContainer,
@@ -61,8 +59,8 @@ class AdminDashboard {
 	}
 
 	initiateDashboard(nav) {
-		const navBtns = nav.querySelectorAll('.dashboard__nav--button');
-		const accordionBtns = nav.querySelectorAll('.dashboard__accordion--button');
+		const navBtns = nav.querySelectorAll('.main');
+		const accordionBtns = nav.querySelectorAll('.sub');
 
 		navBtns.forEach((navButton) => {
 			navButton.addEventListener('click', () => {
