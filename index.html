@@ -76,7 +76,7 @@
 					<div class="admin-dashboard__nav-content">
 						<nav class="admin-dashboard__nav">
 							<!-- Home -->
-							<button class="dashboard__button main">
+							<button class="dashboard__button main" data-for-tab="1">
 								<img
 									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
 									height="20"
@@ -86,12 +86,6 @@
 								/>
 								<span>Home</span>
 							</button>
-
-							<div class="accordion-content">
-								<button class="dashboard__button sub" data-for-tab="1">
-									<span>Weeklyl Logistics Overview</span>
-								</button>
-							</div>
 
 							<!-- CRMs -->
 							<button class="dashboard__button main">
@@ -176,9 +170,7 @@
 
 						<!-- main content -->
 						<main class="admin-dashboard__content">
-							<div id="home" class="tabcontent" data-tab="1">
-								Weekly Logistics Overview
-							</div>
+							<div id="home" class="tabcontent" data-tab="1">Home</div>
 							<div id="crms" class="tabcontent" data-tab="2">Buyer</div>
 							<div id="financial" class="tabcontent" data-tab="3">Farmer</div>
 							<div id="inventory" class="tabcontent" data-tab="4">
