@@ -62,15 +62,15 @@ class AdminDashboard {
 		const navBtns = nav.querySelectorAll('.main');
 		const accordionBtns = nav.querySelectorAll('.sub');
 
-		navBtns.forEach((navButton) => {
-			navButton.addEventListener('click', () => {
-				this.navButtonHandler(navButton);
+		navBtns.forEach((button) => {
+			button.addEventListener('click', () => {
+				this.navButtonHandler(button);
 			});
 		});
 
-		accordionBtns.forEach((accordionButton) => {
-			accordionButton.addEventListener('click', () => {
-				this.accordionButtonHandler(accordionButton);
+		accordionBtns.forEach((button) => {
+			button.addEventListener('click', () => {
+				this.accordionButtonHandler(button);
 			});
 		});
 
