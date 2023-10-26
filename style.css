@@ -10,7 +10,7 @@ body {
 	box-sizing: border-box;
 }
 
-/* ||| global positioning */
+/* # global positioning */
 
 .admin-dashboard {
 	height: 100dvh;
@@ -23,7 +23,9 @@ body {
 	flex: 1;
 }
 
-/* || header */
+/* # page sections */
+
+/* ## header */
 .admin-dashboard__header {
 	display: flex;
 	height: 100px;
@@ -78,7 +80,7 @@ body {
 	right: 9px;
 }
 
-/* || dashboard panel */
+/* ## dashboard panel */
 
 .admin-dashboard__nav {
 	display: flex;
@@ -88,44 +90,34 @@ body {
 	background: #efe9e8;
 }
 
-/* || buttons and interactions */
+/* ## accordion content */
 
-.dashboard__nav--button {
-	background-color: #efe9e8;
+.admin-dashboard__accordion-content {
+	/* display: none; */
 }
 
-.dashboard__nav--button:focus {
-	outline: none;
+.admin-dashboard__accordion-content.active {
+	display: block;
 }
 
-.dashboard__nav--button:focus-visible {
-	outline: 2px solid #007d7a;
-	z-index: 100;
+/* ## dashboard content */
+
+.admin-dashboard__content {
+	padding: 50px;
 }
 
-/* hover button styles */
-.dashboard__nav--button:hover:not(.active),
-.dashboard__nav--button:focus:not(.active) {
-	color: #233235;
-	background-color: rgba(251, 245, 242, 1);
+/* ## tab content */
+.tabcontent {
+	display: none;
 }
 
-.dashboard__nav--button.active:hover {
-	color: #233235;
+.tabcontent--active {
+	display: block;
 }
 
-/* applies left border to nav button on hover */
-.dashboard__nav--button:hover:not(.active):after {
-	content: '';
-	width: 6px;
-	height: 100%;
-	background-color: #f1d7cc;
-	position: absolute;
-	left: 0;
-}
+/* # buttons and interactions */
 
-.admin-dashboard__accordion button {
-	/* background-color: #efe9e8; */
+.admin-dashboard__nav .dashboard__button {
 	color: #233235;
 	height: 46px;
 	width: 100%;
@@ -139,93 +131,100 @@ body {
 	font-family: 'DM Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
+
+	/* ## main buttons */
+	&.main {
+		background-color: #efe9e8;
+
+		/* ### active styles */
+		&.active {
+			background-color: rgba(184, 209, 209, 1);
+
+			/* adds border to active class */
+			&:before {
+				content: '';
+				width: 6px;
+				height: 100%;
+				background-color: rgba(0, 125, 122, 1);
+				position: absolute;
+				left: 0;
+			}
+
+			/* active arrow */
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: 0;
+				border-width: 14px;
+				border-style: solid;
+				border-right-color: #fff;
+				border-bottom-color: transparent;
+				border-left-color: transparent;
+				border-top-color: transparent;
+				z-index: 100;
+			}
+		}
+
+		/* ### hover styles */
+		&:hover:not(.active) {
+			background-color: rgba(251, 245, 242, 1);
+
+			/* applies left border */
+			&:before {
+				content: '';
+				width: 6px;
+				height: 100%;
+				background-color: #f1d7cc;
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+
+	/* ## accordion buttons */
+	&.sub {
+		background-color: rgba(229, 241, 241, 1);
+
+		/* ### active styles */
+		&.active {
+			background-color: rgba(211, 234, 234, 1);
+			font-weight: 700;
+
+			/* adds active border to active class */
+			&:before {
+				content: '';
+				width: 6px;
+				height: 100%;
+				background-color: rgba(184, 209, 209, 1);
+				position: absolute;
+				left: 0;
+			}
+		}
+
+		/* ### hover styles */
+		&:hover:before {
+			content: '';
+			width: 6px;
+			height: 100%;
+			background-color: rgba(184, 209, 209, 1);
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	/* ### focus styles */
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: 2px solid #007d7a;
+		z-index: 100;
+	}
 }
 
-/* || Accoridon buttons */
-
-.dashboard__nav--button.active {
-	background-color: rgba(184, 209, 209, 1);
-}
-
-.dashboard__accordion--button {
-	background-color: rgba(229, 241, 241, 1);
-}
-.dashboard__accordion--button.active {
-	background-color: rgba(211, 234, 234, 1);
-	font-weight: 700;
-}
-
-.dashboard__accordion--button.active:before {
-	content: '';
-	width: 6px;
-	height: 100%;
-	background-color: rgba(184, 209, 209, 1);
-	position: absolute;
-	left: 0;
-}
-
-.dashboard__accordion--button:hover:before {
-	content: '';
-	width: 6px;
-	height: 100%;
-	background-color: rgba(184, 209, 209, 1);
-	position: absolute;
-	left: 0;
-}
-
-/* | active button styles */
-
-/* active border */
-.dashboard__nav--button.active:before {
-	content: '';
-	width: 6px;
-	height: 100%;
-	background-color: rgba(0, 125, 122, 1);
-	position: absolute;
-	left: 0;
-}
-
-/* active arrow */
-.dashboard__nav--button.active:after {
-	content: '';
-	display: block;
-	position: absolute;
-	right: 0;
-	border-width: 14px;
-	border-style: solid;
-	border-right-color: #fff;
-	border-bottom-color: transparent;
-	border-left-color: transparent;
-	border-top-color: transparent;
-	z-index: 100;
-}
-
-/* ||| accordion content */
-
-.admin-dashboard__accordion-content {
-	display: none;
-}
-
-.admin-dashboard__accordion-content.active {
-	display: block;
-}
-
-/* ||| tab content */
-.tabcontent {
-	display: none;
-}
-
-.tabcontent--active {
-	display: block;
-}
-
-/* dashboard content */
-
-.admin-dashboard__content {
-	padding: 50px;
-}
-
-/* ||| media queries */
+/* # media queries */
 @media (min-width: 1024px) {
 	.admin-dashboard__nav {
 		width: 348px;
