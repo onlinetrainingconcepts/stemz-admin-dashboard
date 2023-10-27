@@ -87,45 +87,8 @@
 								<span>Home</span>
 							</button>
 
-							<!-- CRMs -->
-							<button class="dashboard__button main">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span>CRMs</span>
-							</button>
-							<div class="accordion-content">
-								<button class="dashboard__button sub" data-for-tab="2">
-									<span>Buyer</span>
-								</button>
-								<button class="dashboard__button sub" data-for-tab="3">
-									<span>Farmer</span>
-								</button>
-							</div>
-
-							<!-- Financial -->
-							<button class="dashboard__button main">
-								<img
-									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
-									height="20"
-									width="20"
-									alt=""
-									class="dashboard__nav--icon"
-								/>
-								<span>Financial</span>
-							</button>
-							<div class="accordion-content">
-								<button class="dashboard__button sub" data-for-tab="4">
-									<span>Financial</span>
-								</button>
-							</div>
-
 							<!-- Inventory -->
-							<button class="dashboard__button main">
+							<button class="dashboard__button main" data-for-tab="2">
 								<img
 									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
 									height="20"
@@ -135,16 +98,8 @@
 								/>
 								<span>Inventory</span>
 							</button>
-							<div class="accordion-content">
-								<button class="dashboard__button sub" data-for-tab="5">
-									<span>All Inventory</span>
-								</button>
-								<button class="dashboard__button sub" data-for-tab="6">
-									<span>Add new product</span>
-								</button>
-							</div>
 
-							<!-- Orders -->
+							<!-- Buyer Managerment -->
 							<button class="dashboard__button main">
 								<img
 									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
@@ -153,42 +108,64 @@
 									alt=""
 									class="dashboard__nav--icon"
 								/>
-								<span>Orders</span>
+								<span>Buyer Managerment</span>
 							</button>
 							<div class="accordion-content">
-								<button class="dashboard__button sub" data-for-tab="7">
+								<button class="dashboard__button sub" data-for-tab="3">
 									<span>Current Sales Cycle</span>
 								</button>
-								<button class="dashboard__button sub" data-for-tab="8">
+								<button class="dashboard__button sub" data-for-tab="4">
 									<span>Future PAOs</span>
 								</button>
-								<button class="dashboard__button sub" data-for-tab="9">
-									<span>Standing Orders</span>
+
+								<button class="dashboard__button sub" data-for-tab="5">
+									<span>Purchase History</span>
 								</button>
 							</div>
+
+							<!-- Farmer Management -->
+							<button class="dashboard__button main">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span>Farmer Management</span>
+							</button>
+							<div class="accordion-content">
+								<button class="dashboard__button sub" data-for-tab="6">
+									<span>Current Sales Cycle</span>
+								</button>
+								<button class="dashboard__button sub" data-for-tab="7">
+									<span>Farmer Feedback</span>
+								</button>
+							</div>
+
+							<!-- Archive -->
+							<button class="dashboard__button main" data-for-tab="8">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span>Archive</span>
+							</button>
 						</nav>
 
 						<!-- main content -->
 						<main class="admin-dashboard__content">
-							<div id="home" class="tabcontent" data-tab="1">Home</div>
-							<div id="crms" class="tabcontent" data-tab="2">Buyer</div>
-							<div id="financial" class="tabcontent" data-tab="3">Farmer</div>
-							<div id="inventory" class="tabcontent" data-tab="4">
-								Financial
-							</div>
-							<div id="orders" class="tabcontent" data-tab="5">
-								All Inventory
-							</div>
-							<div id="orders" class="tabcontent" data-tab="6">
-								Add new product
-							</div>
-							<div id="orders" class="tabcontent" data-tab="7">
-								Current Sales Cycle
-							</div>
-							<div id="orders" class="tabcontent" data-tab="8">Future PAOs</div>
-							<div id="orders" class="tabcontent" data-tab="9">
-								Standing Orders
-							</div>
+							<div class="tabcontent" data-tab="1">Home</div>
+							<div class="tabcontent" data-tab="2">Inventory</div>
+							<div class="tabcontent" data-tab="3">Current Sales Cycle</div>
+							<div class="tabcontent" data-tab="4">Future PAOs</div>
+							<div class="tabcontent" data-tab="5">Standing Orders</div>
+							<div class="tabcontent" data-tab="6">Current Sales Cycle</div>
+							<div class="tabcontent" data-tab="7">Farmer Feedback</div>
+							<div class="tabcontent" data-tab="8">Archive</div>
 						</main>
 					</div>
 				</div>
