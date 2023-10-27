@@ -36,11 +36,14 @@ class AdminDashboard {
 		let tabNumber;
 		let tabToActivate;
 
-		// varifies sibiling is accordion content before assigning variable
-		if (button.nextElementSibling.classList.contains('accordion-content')) {
-			accordionContent = button.nextElementSibling;
-		} else {
-			accordionContent = null;
+		// if button has a sibling, continue
+		if (button.nextElementSibling) {
+			// varifies sibiling is accordion content before assigning variable
+			if (button.nextElementSibling.classList.contains('accordion-content')) {
+				accordionContent = button.nextElementSibling;
+			} else {
+				accordionContent = null;
+			}
 		}
 
 		// verifies button contains property before assigning variable
