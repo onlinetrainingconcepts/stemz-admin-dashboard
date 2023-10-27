@@ -93,11 +93,17 @@ body {
 /* ## accordion content */
 
 .accordion-content {
-	display: none;
+	/* display: block; */
+	/* display: none; */
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 400ms ease-in-out;
 }
 
 .accordion-content.active {
-	display: block;
+	/* display: block; */
+	/* height: auto; */
+	max-height: 100%;
 }
 
 /* ## dashboard content */
