@@ -8,7 +8,171 @@
 		<title>Stemz Admin Dashboard</title>
 	</head>
 	<body>
-		<div id="app"></div>
-		<script type="module" src="/main.js"></script>
+		<div id="app">
+			<div class="container">
+				<div class="admin-dashboard">
+					<header class="admin-dashboard__header">
+						<span>
+							<svg
+								width="163"
+								height="44"
+								viewBox="0 0 163 44"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M21.1557 22.6001C19.4514 21.1049 17.0736 19.6607 14.757 18.2774C12.8588 17.1382 11.0728 16.0601 10.0013 15.1345C8.46024 13.7614 7.71525 12.1849 7.71525 10.2829C7.71525 7.82154 9.04195 5.19741 12.7771 5.19741C16.0632 5.19741 18.3594 7.36384 18.3594 10.4558V10.9949L23.2376 10.5474V10.0999C23.2376 3.46834 18.0941 0 13.0016 0C7.90916 0 2.53093 3.25475 2.53093 10.405C2.53093 13.9547 3.94948 16.8331 6.858 19.2131C8.35819 20.4235 10.5421 21.7559 12.6444 23.0375L12.709 23.0768C14.6035 24.2318 16.3805 25.3151 17.3593 26.1498C19.0942 27.5737 19.9821 29.5571 19.9821 32.0592C19.9821 36.3209 17.2879 38.8636 12.7669 38.8636C8.71538 38.8636 5.74562 36.626 5.01083 33.0254L4.91898 32.5779L0 33.2288L0.0204112 33.6866C0.255135 38.6704 5.37823 44 12.6444 44C18.6656 44 25.1562 40.1858 25.1562 31.8151C25.1562 28.0009 23.8397 24.9903 21.1353 22.6001H21.1557ZM29.2279 6.20443H38.923V43.2169H44.0359V6.20443H53.8433V1.1189H29.2279V6.20443ZM83.3168 20.332H64.9879V38.0805H84.1944V43.2169H59.9363V1.1189H83.8985V6.20443H64.9879V15.0126H83.3168V20.332ZM110.912 34.3477L92.9302 1.1189H90.9912V43.2169H95.9306V16.6399L109.779 42.9626L109.922 43.2169H111.79L125.894 16.6196V43.2169H130.772V1.1189H128.782L110.912 34.3477ZM162.653 2.85814L144.579 38.0805H163V43.2169H136.987V41.6607L137.048 41.5489L155.346 6.20443H139.15V1.1189H162.704V2.74626L162.653 2.85814Z"
+									fill="#233235"
+								/>
+							</svg>
+						</span>
+						<div class="admin-dashboard__user-notifications">
+							<div class="admin-dashboard__profile-pic">
+								<img
+									src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
+									alt=""
+									class="admin-dashboard__user-img"
+								/>
+							</div>
+							<div class="admin-dashboard__notifications">
+								<!-- <img src="assets/notification-icon.png" alt="" /> -->
+								<svg
+									width="32px"
+									height="36px"
+									viewBox="0 0 30 36"
+									version="1.1"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink"
+									xml:space="preserve"
+									xmlns:serif="http://www.serif.com/"
+									style="
+										fill-rule: evenodd;
+										clip-rule: evenodd;
+										stroke-linejoin: round;
+										stroke-miterlimit: 2;
+									"
+								>
+									<g id="Artboard2" transform="matrix(1,0,0,1,0,-0.03125)">
+										<rect
+											x="0"
+											y="0.031"
+											width="30"
+											height="35.031"
+											style="fill: none"
+										/>
+										<path
+											d="M29.069,25.401C29.666,25.912 30,26.638 30,27.406C30,28.854 28.823,30.031 27.375,30.031L2.625,30.031C1.178,30.031 0,28.854 0,27.406C0,26.638 0.335,25.912 0.918,25.413C3.2,23.484 4.5,20.682 4.5,17.713L4.5,13.531C4.5,8.253 8.42,3.883 13.5,3.151L13.5,1.531C13.5,0.702 14.172,0.031 15,0.031C15.828,0.031 16.5,0.702 16.5,1.531L16.5,3.151C21.579,3.883 25.5,8.253 25.5,13.531L25.5,17.713C25.5,20.682 26.801,23.484 29.069,25.401ZM15,35.063C12.283,35.063 10.011,33.126 9.489,30.563L20.511,30.563C19.989,33.126 17.716,35.063 15,35.063Z"
+											style="fill: rgb(35, 50, 53)"
+										/>
+									</g>
+								</svg>
+								<span class="admin-dashboard__notification-bubble">2</span>
+							</div>
+						</div>
+					</header>
+
+					<div class="admin-dashboard__nav-content">
+						<nav class="admin-dashboard__nav">
+							<!-- Home -->
+							<button class="dashboard__button main" data-for-tab="1">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span>Home</span>
+							</button>
+
+							<!-- Inventory -->
+							<button class="dashboard__button main" data-for-tab="2">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span>Inventory</span>
+							</button>
+
+							<!-- Buyer Managerment -->
+							<button class="dashboard__button main">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span>Buyer Managerment</span>
+							</button>
+							<div class="accordion-content">
+								<button class="dashboard__button sub" data-for-tab="3">
+									<span>Current Sales Cycle</span>
+								</button>
+								<button class="dashboard__button sub" data-for-tab="4">
+									<span>Future PAOs</span>
+								</button>
+
+								<button class="dashboard__button sub" data-for-tab="5">
+									<span>Purchase History</span>
+								</button>
+							</div>
+
+							<!-- Farmer Management -->
+							<button class="dashboard__button main">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span>Farmer Management</span>
+							</button>
+							<div class="accordion-content">
+								<button class="dashboard__button sub" data-for-tab="6">
+									<span>Current Sales Cycle</span>
+								</button>
+								<button class="dashboard__button sub" data-for-tab="7">
+									<span>Farmer Feedback</span>
+								</button>
+							</div>
+
+							<!-- Archive -->
+							<button class="dashboard__button main" data-for-tab="8">
+								<img
+									src="https://static-00.iconduck.com/assets.00/image-x-generic-symbolic-icon-256x256-irvzk21b.png"
+									height="20"
+									width="20"
+									alt=""
+									class="dashboard__nav--icon"
+								/>
+								<span>Archive</span>
+							</button>
+						</nav>
+
+						<!-- main content -->
+						<main class="admin-dashboard__content">
+							<div class="tabcontent" data-tab="1">Home</div>
+							<div class="tabcontent" data-tab="2">Inventory</div>
+							<div class="tabcontent" data-tab="3">Current Sales Cycle</div>
+							<div class="tabcontent" data-tab="4">Future PAOs</div>
+							<div class="tabcontent" data-tab="5">Standing Orders</div>
+							<div class="tabcontent" data-tab="6">Current Sales Cycle</div>
+							<div class="tabcontent" data-tab="7">Farmer Feedback</div>
+							<div class="tabcontent" data-tab="8">Archive</div>
+						</main>
+					</div>
+				</div>
+				<!-- end admin dashboard -->
+			</div>
+			<!-- end container -->
+		</div>
+		<script src="/main.js"></script>
 	</body>
 </html>
