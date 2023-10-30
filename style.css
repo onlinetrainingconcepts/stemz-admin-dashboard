@@ -109,7 +109,9 @@ body {
 /* ## dashboard content */
 
 .admin-dashboard__content {
+	background-color: #fff;
 	padding: 50px;
+	flex-grow: 1;
 }
 
 /* ## tab content */
