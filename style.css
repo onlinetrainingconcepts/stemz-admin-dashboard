@@ -93,23 +93,21 @@ body {
 /* ## accordion content */
 
 .accordion-content {
-	/* display: block; */
-	/* display: none; */
 	max-height: 0px;
 	overflow: hidden;
 	transition: max-height 400ms ease-in-out;
 }
 
 .accordion-content.active {
-	/* display: block; */
-	/* height: auto; */
 	max-height: 100%;
 }
 
 /* ## dashboard content */
 
 .admin-dashboard__content {
+	background-color: #fff;
 	padding: 50px;
+	flex-grow: 1;
 }
 
 /* ## tab content */
