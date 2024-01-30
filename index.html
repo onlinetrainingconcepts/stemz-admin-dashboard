@@ -78,7 +78,7 @@
 							<ul>
 								<!-- Home -->
 								<li>
-									<button class="dashboard__button main" data-for-tab="1">
+									<button class="dashboard__button main" data-for-tab="home">
 										<svg
 											width="20"
 											height="20"
@@ -103,7 +103,10 @@
 
 								<!-- Inventory -->
 								<li>
-									<button class="dashboard__button main" data-for-tab="2">
+									<button
+										class="dashboard__button main"
+										data-for-tab="inventory"
+									>
 										<svg
 											width="21"
 											height="20"
@@ -155,17 +158,26 @@
 
 									<ul class="accordion-content">
 										<li>
-											<button class="dashboard__button sub" data-for-tab="3">
+											<button
+												class="dashboard__button sub"
+												data-for-tab="buyer-current-sales"
+											>
 												<span>Current Sales Cycle</span>
 											</button>
 										</li>
 										<li>
-											<button class="dashboard__button sub" data-for-tab="4">
+											<button
+												class="dashboard__button sub"
+												data-for-tab="buyer-future-paos"
+											>
 												<span>Future PAOs</span>
 											</button>
 										</li>
 										<li>
-											<button class="dashboard__button sub" data-for-tab="5">
+											<button
+												class="dashboard__button sub"
+												data-for-tab="buyer-purchase-history"
+											>
 												<span>Purchase History</span>
 											</button>
 										</li>
@@ -196,25 +208,32 @@
 
 										<span>Farmer Management</span>
 									</button>
-								</li>
 
-								<ul class="accordion-content">
-									<li>
-										<button class="dashboard__button sub" data-for-tab="6">
-											<span>Current Sales Cycle</span>
-										</button>
-									</li>
-									<li>
-										<button class="dashboard__button sub" data-for-tab="7">
-											<span>Farmer Feedback</span>
-										</button>
-									</li>
-								</ul>
-								<!-- end accordion content-->
+									<ul class="accordion-content">
+										<li>
+											<button
+												class="dashboard__button sub"
+												data-for-tab="farmer-current-sales"
+											>
+												<span>Current Sales Cycle</span>
+											</button>
+										</li>
+										<li>
+											<button
+												class="dashboard__button sub"
+												data-for-tab="farmer-feedback"
+											>
+												<span>Farmer Feedback</span>
+											</button>
+										</li>
+									</ul>
+									<!-- end accordion content-->
+								</li>
+								<!-- end farmer management-->
 
 								<!-- Archive -->
 								<li>
-									<button class="dashboard__button main" data-for-tab="8">
+									<button class="dashboard__button main" data-for-tab="archive">
 										<svg
 											width="21"
 											height="20"
@@ -235,6 +254,7 @@
 										<span>Archive</span>
 									</button>
 								</li>
+								<!-- end archive -->
 							</ul>
 							<!-- end nav ul-->
 						</nav>
@@ -242,21 +262,31 @@
 						<!-- main content -->
 						<main class="admin-dashboard__content">
 							<!-- home -->
-							<div class="tabcontent" data-tab="1">Home</div>
+							<div class="tabcontent" data-tab="home">Home</div>
 							<!-- inventory -->
-							<div class="tabcontent" data-tab="2">Inventory</div>
+							<div class="tabcontent" data-tab="inventory">Inventory</div>
 							<!-- current sales cycle -->
-							<div class="tabcontent" data-tab="3">Current Sales Cycle</div>
+							<div class="tabcontent" data-tab="buyer-current-sales">
+								Current Sales Cycle
+							</div>
 							<!-- future paos -->
-							<div class="tabcontent" data-tab="4">Future PAOs</div>
+							<div class="tabcontent" data-tab="buyer-future-paos">
+								Future PAOs
+							</div>
 							<!-- standing orders -->
-							<div class="tabcontent" data-tab="5">Standing Orders</div>
+							<div class="tabcontent" data-tab="buyer-purchase-history">
+								Standing Orders
+							</div>
 							<!-- current sales cycle -->
-							<div class="tabcontent" data-tab="6">Current Sales Cycle</div>
+							<div class="tabcontent" data-tab="farmer-current-sales">
+								Current Sales Cycle
+							</div>
 							<!-- farmer feedback -->
-							<div class="tabcontent" data-tab="7">Farmer Feedback</div>
+							<div class="tabcontent" data-tab="farmer-feedback">
+								Farmer Feedback
+							</div>
 							<!-- archive -->
-							<div class="tabcontent" data-tab="8">Archive</div>
+							<div class="tabcontent" data-tab="archive">Archive</div>
 						</main>
 					</div>
 				</div>

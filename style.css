@@ -96,6 +96,10 @@ body {
 	padding: 0;
 }
 
+.admin-dashboard__nav ul li {
+	position: relative;
+}
+
 /* ## accordion content */
 
 .accordion-content {
