@@ -8,109 +8,42 @@
 		<title>Stemz Admin Dashboard</title>
 	</head>
 	<body>
-		<div id="app">
-			<div class="container">
-				<div class="admin-dashboard">
-					<header class="admin-dashboard__header">
-						<span>
-							<svg
-								width="163"
-								height="44"
-								viewBox="0 0 163 44"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M21.1557 22.6001C19.4514 21.1049 17.0736 19.6607 14.757 18.2774C12.8588 17.1382 11.0728 16.0601 10.0013 15.1345C8.46024 13.7614 7.71525 12.1849 7.71525 10.2829C7.71525 7.82154 9.04195 5.19741 12.7771 5.19741C16.0632 5.19741 18.3594 7.36384 18.3594 10.4558V10.9949L23.2376 10.5474V10.0999C23.2376 3.46834 18.0941 0 13.0016 0C7.90916 0 2.53093 3.25475 2.53093 10.405C2.53093 13.9547 3.94948 16.8331 6.858 19.2131C8.35819 20.4235 10.5421 21.7559 12.6444 23.0375L12.709 23.0768C14.6035 24.2318 16.3805 25.3151 17.3593 26.1498C19.0942 27.5737 19.9821 29.5571 19.9821 32.0592C19.9821 36.3209 17.2879 38.8636 12.7669 38.8636C8.71538 38.8636 5.74562 36.626 5.01083 33.0254L4.91898 32.5779L0 33.2288L0.0204112 33.6866C0.255135 38.6704 5.37823 44 12.6444 44C18.6656 44 25.1562 40.1858 25.1562 31.8151C25.1562 28.0009 23.8397 24.9903 21.1353 22.6001H21.1557ZM29.2279 6.20443H38.923V43.2169H44.0359V6.20443H53.8433V1.1189H29.2279V6.20443ZM83.3168 20.332H64.9879V38.0805H84.1944V43.2169H59.9363V1.1189H83.8985V6.20443H64.9879V15.0126H83.3168V20.332ZM110.912 34.3477L92.9302 1.1189H90.9912V43.2169H95.9306V16.6399L109.779 42.9626L109.922 43.2169H111.79L125.894 16.6196V43.2169H130.772V1.1189H128.782L110.912 34.3477ZM162.653 2.85814L144.579 38.0805H163V43.2169H136.987V41.6607L137.048 41.5489L155.346 6.20443H139.15V1.1189H162.704V2.74626L162.653 2.85814Z"
-									fill="#233235"
-								/>
-							</svg>
-						</span>
-						<div class="admin-dashboard__user-notifications">
-							<div class="admin-dashboard__profile-pic">
-								<img
-									src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-									alt=""
-									class="admin-dashboard__user-img"
-								/>
-							</div>
-							<div class="admin-dashboard__notifications">
-								<!-- <img src="assets/notification-icon.png" alt="" /> -->
-								<svg
-									width="32px"
-									height="36px"
-									viewBox="0 0 30 36"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									xmlns:xlink="http://www.w3.org/1999/xlink"
-									xml:space="preserve"
-									xmlns:serif="http://www.serif.com/"
-									style="
-										fill-rule: evenodd;
-										clip-rule: evenodd;
-										stroke-linejoin: round;
-										stroke-miterlimit: 2;
-									"
-								>
-									<g id="Artboard2" transform="matrix(1,0,0,1,0,-0.03125)">
-										<rect
-											x="0"
-											y="0.031"
-											width="30"
-											height="35.031"
-											style="fill: none"
-										/>
-										<path
-											d="M29.069,25.401C29.666,25.912 30,26.638 30,27.406C30,28.854 28.823,30.031 27.375,30.031L2.625,30.031C1.178,30.031 0,28.854 0,27.406C0,26.638 0.335,25.912 0.918,25.413C3.2,23.484 4.5,20.682 4.5,17.713L4.5,13.531C4.5,8.253 8.42,3.883 13.5,3.151L13.5,1.531C13.5,0.702 14.172,0.031 15,0.031C15.828,0.031 16.5,0.702 16.5,1.531L16.5,3.151C21.579,3.883 25.5,8.253 25.5,13.531L25.5,17.713C25.5,20.682 26.801,23.484 29.069,25.401ZM15,35.063C12.283,35.063 10.011,33.126 9.489,30.563L20.511,30.563C19.989,33.126 17.716,35.063 15,35.063Z"
-											style="fill: rgb(35, 50, 53)"
-										/>
-									</g>
+		<div class="container">
+			<div class="admin-dashboard">
+				<nav class="admin-dashboard__nav">
+					<ul>
+						<!-- Home -->
+						<li>
+							<button class="dashboard__button main" data-for-tab="home">
+								<svg>
+									<use xlink:href="#home-icon" />
 								</svg>
-								<span class="admin-dashboard__notification-bubble">2</span>
-							</div>
-						</div>
-					</header>
+								<span>Home</span>
+							</button>
+						</li>
+						<!-- end home -->
 
-					<div class="admin-dashboard__nav-content">
-						<nav class="admin-dashboard__nav">
-							<ul>
-								<!-- Home -->
-								<li>
-									<button class="dashboard__button main" data-for-tab="home">
-										<svg>
-											<use xlink:href="#home-icon" />
-										</svg>
-										<span>Home</span>
-									</button>
-								</li>
-								<!-- end home -->
+						<!-- Inventory -->
+						<li>
+							<button class="dashboard__button main" data-for-tab="inventory">
+								<svg>
+									<use xlink:href="#inventory-icon" />
+								</svg>
+								<span>Inventory</span>
+							</button>
+						</li>
+						<!-- end inventory-->
 
-								<!-- Inventory -->
-								<li>
-									<button
-										class="dashboard__button main"
-										data-for-tab="inventory"
-									>
-										<svg>
-											<use xlink:href="#inventory-icon" />
-										</svg>
-										<span>Inventory</span>
-									</button>
-								</li>
-								<!-- end inventory-->
+						<!-- Buyer Managerment -->
+						<li>
+							<button class="dashboard__button main">
+								<svg>
+									<use xlink:href="#management-icon" />
+								</svg>
+								<span>Buyer Managerment</span>
+							</button>
 
-								<!-- Buyer Managerment -->
-								<li>
-									<button class="dashboard__button main">
-										<svg>
-											<use xlink:href="#management-icon" />
-										</svg>
-										<span>Buyer Managerment</span>
-									</button>
-
-									<ul class="accordion-content">
+							<!-- <ul class="accordion-content">
 										<li>
 											<button
 												class="dashboard__button sub"
@@ -135,21 +68,21 @@
 												<span>Purchase History</span>
 											</button>
 										</li>
-									</ul>
-									<!-- end accordion content-->
-								</li>
-								<!-- end buyer management -->
+									</ul> -->
+							<!-- end accordion content-->
+						</li>
+						<!-- end buyer management -->
 
-								<!-- Farmer Management -->
-								<li>
-									<button class="dashboard__button main">
-										<svg>
-											<use xlink:href="#management-icon" />
-										</svg>
-										<span>Farmer Management</span>
-									</button>
+						<!-- Farmer Management -->
+						<li>
+							<button class="dashboard__button main">
+								<svg>
+									<use xlink:href="#management-icon" />
+								</svg>
+								<span>Farmer Management</span>
+							</button>
 
-									<ul class="accordion-content">
+							<!-- <ul class="accordion-content">
 										<li>
 											<button
 												class="dashboard__button sub"
@@ -166,108 +99,1267 @@
 												<span>Farmer Feedback</span>
 											</button>
 										</li>
-									</ul>
-									<!-- end accordion content-->
-								</li>
-								<!-- end farmer management-->
+									</ul> -->
+							<!-- end accordion content-->
+						</li>
+						<!-- end farmer management-->
 
-								<!-- Archive -->
-								<li>
-									<button class="dashboard__button main" data-for-tab="archive">
-										<svg>
-											<use xlink:href="#archive-icon" />
-										</svg>
-										<span>Archive</span>
-									</button>
-								</li>
-								<!-- end archive -->
-							</ul>
-							<!-- end nav ul-->
-						</nav>
-
-						<!-- main content -->
-						<main class="admin-dashboard__content">
-							<!-- home -->
-							<div class="tabcontent" data-tab="home">Home</div>
-							<!-- inventory -->
-							<div class="tabcontent" data-tab="inventory">Inventory</div>
-							<!-- current sales cycle -->
-							<div class="tabcontent" data-tab="buyer-current-sales">
-								Current Sales Cycle
-							</div>
-							<!-- future paos -->
-							<div class="tabcontent" data-tab="buyer-future-paos">
-								Future PAOs
-							</div>
-							<!-- standing orders -->
-							<div class="tabcontent" data-tab="buyer-purchase-history">
-								Standing Orders
-							</div>
-							<!-- current sales cycle -->
-							<div class="tabcontent" data-tab="farmer-current-sales">
-								Current Sales Cycle
-							</div>
-							<!-- farmer feedback -->
-							<div class="tabcontent" data-tab="farmer-feedback">
-								Farmer Feedback
-							</div>
-							<!-- archive -->
-							<div class="tabcontent" data-tab="archive">Archive</div>
-						</main>
+						<!-- Archive -->
+						<li>
+							<button class="dashboard__button main" data-for-tab="archive">
+								<svg>
+									<use xlink:href="#archive-icon" />
+								</svg>
+								<span>Archive</span>
+							</button>
+						</li>
+						<!-- end archive -->
+					</ul>
+					<!-- end nav ul-->
+					<div class="admin-dashboard__nav-resize-container">
+						<button class="admin-dashboard__nav-resize-button">
+							<svg>
+								<use xlink:href="#resize-arrow" />
+							</svg>
+						</button>
 					</div>
-				</div>
-				<!-- end admin dashboard -->
+				</nav>
+
+				<!-- main content -->
+				<main class="admin-dashboard__content">
+					<p>&nbsp;CHAPTER 1. Loomings.</p>
+					<p><br /></p>
+					<p>
+						Call me Ishmael. Some years ago&mdash;never mind how long
+						precisely&mdash;having little or no money in my purse, and nothing
+						particular to interest me on shore, I thought I would sail about a
+						little and see the watery part of the world. It is a way I have of
+						driving off the spleen and regulating the circulation. Whenever I
+						find myself growing grim about the mouth; whenever it is a damp,
+						drizzly November in my soul; whenever I find myself involuntarily
+						pausing before coffin warehouses, and bringing up the rear of every
+						funeral I meet; and especially whenever my hypos get such an upper
+						hand of me, that it requires a strong moral principle to prevent me
+						from deliberately stepping into the street, and methodically
+						knocking people&rsquo;s hats off&mdash;then, I account it high time
+						to get to sea as soon as I can. This is my substitute for pistol and
+						ball. With a philosophical flourish Cato throws himself upon his
+						sword; I quietly take to the ship. There is nothing surprising in
+						this. If they but knew it, almost all men in their degree, some time
+						or other, cherish very nearly the same feelings towards the ocean
+						with me.
+					</p>
+					<p><br /></p>
+					<p>
+						There now is your insular city of the Manhattoes, belted round by
+						wharves as Indian isles by coral reefs&mdash;commerce surrounds it
+						with her surf. Right and left, the streets take you waterward. Its
+						extreme downtown is the battery, where that noble mole is washed by
+						waves, and cooled by breezes, which a few hours previous were out of
+						sight of land. Look at the crowds of water-gazers there.
+					</p>
+					<p><br /></p>
+					<p>
+						Circumambulate the city of a dreamy Sabbath afternoon. Go from
+						Corlears Hook to Coenties Slip, and from thence, by Whitehall,
+						northward. What do you see?&mdash;Posted like silent sentinels all
+						around the town, stand thousands upon thousands of mortal men fixed
+						in ocean reveries. Some leaning against the spiles; some seated upon
+						the pier-heads; some looking over the bulwarks of ships from China;
+						some high aloft in the rigging, as if striving to get a still better
+						seaward peep. But these are all landsmen; of week days pent up in
+						lath and plaster&mdash;tied to counters, nailed to benches, clinched
+						to desks. How then is this? Are the green fields gone? What do they
+						here?
+					</p>
+					<p><br /></p>
+					<p>
+						But look! here come more crowds, pacing straight for the water, and
+						seemingly bound for a dive. Strange! Nothing will content them but
+						the extremest limit of the land; loitering under the shady lee of
+						yonder warehouses will not suffice. No. They must get just as nigh
+						the water as they possibly can without falling in. And there they
+						stand&mdash;miles of them&mdash;leagues. Inlanders all, they come
+						from lanes and alleys, streets and avenues&mdash;north, east, south,
+						and west. Yet here they all unite. Tell me, does the magnetic virtue
+						of the needles of the compasses of all those ships attract them
+						thither?
+					</p>
+					<p><br /></p>
+					<p>
+						Once more. Say you are in the country; in some high land of lakes.
+						Take almost any path you please, and ten to one it carries you down
+						in a dale, and leaves you there by a pool in the stream. There is
+						magic in it. Let the most absent-minded of men be plunged in his
+						deepest reveries&mdash;stand that man on his legs, set his feet
+						a-going, and he will infallibly lead you to water, if water there be
+						in all that region. Should you ever be athirst in the great American
+						desert, try this experiment, if your caravan happen to be supplied
+						with a metaphysical professor. Yes, as every one knows, meditation
+						and water are wedded for ever.
+					</p>
+					<p><br /></p>
+					<p>
+						But here is an artist. He desires to paint you the dreamiest,
+						shadiest, quietest, most enchanting bit of romantic landscape in all
+						the valley of the Saco. What is the chief element he employs? There
+						stand his trees, each with a hollow trunk, as if a hermit and a
+						crucifix were within; and here sleeps his meadow, and there sleep
+						his cattle; and up from yonder cottage goes a sleepy smoke. Deep
+						into distant woodlands winds a mazy way, reaching to overlapping
+						spurs of mountains bathed in their hill-side blue. But though the
+						picture lies thus tranced, and though this pine-tree shakes down its
+						sighs like leaves upon this shepherd&rsquo;s head, yet all were
+						vain, unless the shepherd&rsquo;s eye were fixed upon the magic
+						stream before him. Go visit the Prairies in June, when for scores on
+						scores of miles you wade knee-deep among Tiger-lilies&mdash;what is
+						the one charm wanting?&mdash;Water&mdash;there is not a drop of
+						water there! Were Niagara but a cataract of sand, would you travel
+						your thousand miles to see it? Why did the poor poet of Tennessee,
+						upon suddenly receiving two handfuls of silver, deliberate whether
+						to buy him a coat, which he sadly needed, or invest his money in a
+						pedestrian trip to Rockaway Beach? Why is almost every robust
+						healthy boy with a robust healthy soul in him, at some time or other
+						crazy to go to sea? Why upon your first voyage as a passenger, did
+						you yourself feel such a mystical vibration, when first told that
+						you and your ship were now out of sight of land? Why did the old
+						Persians hold the sea holy? Why did the Greeks give it a separate
+						deity, and own brother of Jove? Surely all this is not without
+						meaning. And still deeper the meaning of that story of Narcissus,
+						who because he could not grasp the tormenting, mild image he saw in
+						the fountain, plunged into it and was drowned. But that same image,
+						we ourselves see in all rivers and oceans. It is the image of the
+						ungraspable phantom of life; and this is the key to it all.
+					</p>
+					<p><br /></p>
+					<p>
+						Now, when I say that I am in the habit of going to sea whenever I
+						begin to grow hazy about the eyes, and begin to be over conscious of
+						my lungs, I do not mean to have it inferred that I ever go to sea as
+						a passenger. For to go as a passenger you must needs have a purse,
+						and a purse is but a rag unless you have something in it. Besides,
+						passengers get sea-sick&mdash;grow quarrelsome&mdash;don&rsquo;t
+						sleep of nights&mdash;do not enjoy themselves much, as a general
+						thing;&mdash;no, I never go as a passenger; nor, though I am
+						something of a salt, do I ever go to sea as a Commodore, or a
+						Captain, or a Cook. I abandon the glory and distinction of such
+						offices to those who like them. For my part, I abominate all
+						honorable respectable toils, trials, and tribulations of every kind
+						whatsoever. It is quite as much as I can do to take care of myself,
+						without taking care of ships, barques, brigs, schooners, and what
+						not. And as for going as cook,&mdash;though I confess there is
+						considerable glory in that, a cook being a sort of officer on
+						ship-board&mdash;yet, somehow, I never fancied broiling
+						fowls;&mdash;though once broiled, judiciously buttered, and
+						judgmatically salted and peppered, there is no one who will speak
+						more respectfully, not to say reverentially, of a broiled fowl than
+						I will. It is out of the idolatrous dotings of the old Egyptians
+						upon broiled ibis and roasted river horse, that you see the mummies
+						of those creatures in their huge bake-houses the pyramids.
+					</p>
+					<p><br /></p>
+					<p>
+						No, when I go to sea, I go as a simple sailor, right before the
+						mast, plumb down into the forecastle, aloft there to the royal
+						mast-head. True, they rather order me about some, and make me jump
+						from spar to spar, like a grasshopper in a May meadow. And at first,
+						this sort of thing is unpleasant enough. It touches one&rsquo;s
+						sense of honor, particularly if you come of an old established
+						family in the land, the Van Rensselaers, or Randolphs, or
+						Hardicanutes. And more than all, if just previous to putting your
+						hand into the tar-pot, you have been lording it as a country
+						schoolmaster, making the tallest boys stand in awe of you. The
+						transition is a keen one, I assure you, from a schoolmaster to a
+						sailor, and requires a strong decoction of Seneca and the Stoics to
+						enable you to grin and bear it. But even this wears off in time.
+					</p>
+					<p><br /></p>
+					<p>
+						What of it, if some old hunks of a sea-captain orders me to get a
+						broom and sweep down the decks? What does that indignity amount to,
+						weighed, I mean, in the scales of the New Testament? Do you think
+						the archangel Gabriel thinks anything the less of me, because I
+						promptly and respectfully obey that old hunks in that particular
+						instance? Who ain&rsquo;t a slave? Tell me that. Well, then, however
+						the old sea-captains may order me about&mdash;however they may thump
+						and punch me about, I have the satisfaction of knowing that it is
+						all right; that everybody else is one way or other served in much
+						the same way&mdash;either in a physical or metaphysical point of
+						view, that is; and so the universal thump is passed round, and all
+						hands should rub each other&rsquo;s shoulder-blades, and be content.
+					</p>
+					<p><br /></p>
+					<p>
+						Again, I always go to sea as a sailor, because they make a point of
+						paying me for my trouble, whereas they never pay passengers a single
+						penny that I ever heard of. On the contrary, passengers themselves
+						must pay. And there is all the difference in the world between
+						paying and being paid. The act of paying is perhaps the most
+						uncomfortable infliction that the two orchard thieves entailed upon
+						us. But being paid,&mdash;what will compare with it? The urbane
+						activity with which a man receives money is really marvellous,
+						considering that we so earnestly believe money to be the root of all
+						earthly ills, and that on no account can a monied man enter heaven.
+						Ah! how cheerfully we consign ourselves to perdition!
+					</p>
+					<p><br /></p>
+					<p>
+						Finally, I always go to sea as a sailor, because of the wholesome
+						exercise and pure air of the fore-castle deck. For as in this world,
+						head winds are far more prevalent than winds from astern (that is,
+						if you never violate the Pythagorean maxim), so for the most part
+						the Commodore on the quarter-deck gets his atmosphere at second hand
+						from the sailors on the forecastle. He thinks he breathes it first;
+						but not so. In much the same way do the commonalty lead their
+						leaders in many other things, at the same time that the leaders
+						little suspect it. But wherefore it was that after having repeatedly
+						smelt the sea as a merchant sailor, I should now take it into my
+						head to go on a whaling voyage; this the invisible police officer of
+						the Fates, who has the constant surveillance of me, and secretly
+						dogs me, and influences me in some unaccountable way&mdash;he can
+						better answer than any one else. And, doubtless, my going on this
+						whaling voyage, formed part of the grand programme of Providence
+						that was drawn up a long time ago. It came in as a sort of brief
+						interlude and solo between more extensive performances. I take it
+						that this part of the bill must have run something like this:
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Grand Contested Election for the Presidency of the United
+						States. &ldquo;WHALING VOYAGE BY ONE ISHMAEL. &ldquo;BLOODY BATTLE
+						IN AFFGHANISTAN.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						Though I cannot tell why it was exactly that those stage managers,
+						the Fates, put me down for this shabby part of a whaling voyage,
+						when others were set down for magnificent parts in high tragedies,
+						and short and easy parts in genteel comedies, and jolly parts in
+						farces&mdash;though I cannot tell why this was exactly; yet, now
+						that I recall all the circumstances, I think I can see a little into
+						the springs and motives which being cunningly presented to me under
+						various disguises, induced me to set about performing the part I
+						did, besides cajoling me into the delusion that it was a choice
+						resulting from my own unbiased freewill and discriminating judgment.
+					</p>
+					<p><br /></p>
+					<p>
+						Chief among these motives was the overwhelming idea of the great
+						whale himself. Such a portentous and mysterious monster roused all
+						my curiosity. Then the wild and distant seas where he rolled his
+						island bulk; the undeliverable, nameless perils of the whale; these,
+						with all the attending marvels of a thousand Patagonian sights and
+						sounds, helped to sway me to my wish. With other men, perhaps, such
+						things would not have been inducements; but as for me, I am
+						tormented with an everlasting itch for things remote. I love to sail
+						forbidden seas, and land on barbarous coasts. Not ignoring what is
+						good, I am quick to perceive a horror, and could still be social
+						with it&mdash;would they let me&mdash;since it is but well to be on
+						friendly terms with all the inmates of the place one lodges in.
+					</p>
+					<p><br /></p>
+					<p>
+						By reason of these things, then, the whaling voyage was welcome; the
+						great flood-gates of the wonder-world swung open, and in the wild
+						conceits that swayed me to my purpose, two and two there floated
+						into my inmost soul, endless processions of the whale, and, mid most
+						of them all, one grand hooded phantom, like a snow hill in the air.
+					</p>
+					<p><br /></p>
+					<p><br /></p>
+					<p><br /></p>
+					<p><br /></p>
+					<p><br /></p>
+					<p>CHAPTER 2. The Carpet-Bag.</p>
+					<p><br /></p>
+					<p>
+						I stuffed a shirt or two into my old carpet-bag, tucked it under my
+						arm, and started for Cape Horn and the Pacific. Quitting the good
+						city of old Manhatto, I duly arrived in New Bedford. It was a
+						Saturday night in December. Much was I disappointed upon learning
+						that the little packet for Nantucket had already sailed, and that no
+						way of reaching that place would offer, till the following Monday.
+					</p>
+					<p><br /></p>
+					<p>
+						As most young candidates for the pains and penalties of whaling stop
+						at this same New Bedford, thence to embark on their voyage, it may
+						as well be related that I, for one, had no idea of so doing. For my
+						mind was made up to sail in no other than a Nantucket craft, because
+						there was a fine, boisterous something about everything connected
+						with that famous old island, which amazingly pleased me. Besides
+						though New Bedford has of late been gradually monopolising the
+						business of whaling, and though in this matter poor old Nantucket is
+						now much behind her, yet Nantucket was her great original&mdash;the
+						Tyre of this Carthage;&mdash;the place where the first dead American
+						whale was stranded. Where else but from Nantucket did those
+						aboriginal whalemen, the Red-Men, first sally out in canoes to give
+						chase to the Leviathan? And where but from Nantucket, too, did that
+						first adventurous little sloop put forth, partly laden with imported
+						cobblestones&mdash;so goes the story&mdash;to throw at the whales,
+						in order to discover when they were nigh enough to risk a harpoon
+						from the bowsprit?
+					</p>
+					<p><br /></p>
+					<p>
+						Now having a night, a day, and still another night following before
+						me in New Bedford, ere I could embark for my destined port, it
+						became a matter of concernment where I was to eat and sleep
+						meanwhile. It was a very dubious-looking, nay, a very dark and
+						dismal night, bitingly cold and cheerless. I knew no one in the
+						place. With anxious grapnels I had sounded my pocket, and only
+						brought up a few pieces of silver,&mdash;So, wherever you go,
+						Ishmael, said I to myself, as I stood in the middle of a dreary
+						street shouldering my bag, and comparing the gloom towards the north
+						with the darkness towards the south&mdash;wherever in your wisdom
+						you may conclude to lodge for the night, my dear Ishmael, be sure to
+						inquire the price, and don&rsquo;t be too particular.
+					</p>
+					<p><br /></p>
+					<p>
+						With halting steps I paced the streets, and passed the sign of
+						&ldquo;The Crossed Harpoons&rdquo;&mdash;but it looked too expensive
+						and jolly there. Further on, from the bright red windows of the
+						&ldquo;Sword-Fish Inn,&rdquo; there came such fervent rays, that it
+						seemed to have melted the packed snow and ice from before the house,
+						for everywhere else the congealed frost lay ten inches thick in a
+						hard, asphaltic pavement,&mdash;rather weary for me, when I struck
+						my foot against the flinty projections, because from hard,
+						remorseless service the soles of my boots were in a most miserable
+						plight. Too expensive and jolly, again thought I, pausing one moment
+						to watch the broad glare in the street, and hear the sounds of the
+						tinkling glasses within. But go on, Ishmael, said I at last;
+						don&rsquo;t you hear? get away from before the door; your patched
+						boots are stopping the way. So on I went. I now by instinct followed
+						the streets that took me waterward, for there, doubtless, were the
+						cheapest, if not the cheeriest inns.
+					</p>
+					<p><br /></p>
+					<p>
+						Such dreary streets! blocks of blackness, not houses, on either
+						hand, and here and there a candle, like a candle moving about in a
+						tomb. At this hour of the night, of the last day of the week, that
+						quarter of the town proved all but deserted. But presently I came to
+						a smoky light proceeding from a low, wide building, the door of
+						which stood invitingly open. It had a careless look, as if it were
+						meant for the uses of the public; so, entering, the first thing I
+						did was to stumble over an ash-box in the porch. Ha! thought I, ha,
+						as the flying particles almost choked me, are these ashes from that
+						destroyed city, Gomorrah? But &ldquo;The Crossed Harpoons,&rdquo;
+						and &ldquo;The Sword-Fish?&rdquo;&mdash;this, then must needs be the
+						sign of &ldquo;The Trap.&rdquo; However, I picked myself up and
+						hearing a loud voice within, pushed on and opened a second, interior
+						door.
+					</p>
+					<p><br /></p>
+					<p>
+						It seemed the great Black Parliament sitting in Tophet. A hundred
+						black faces turned round in their rows to peer; and beyond, a black
+						Angel of Doom was beating a book in a pulpit. It was a negro church;
+						and the preacher&rsquo;s text was about the blackness of darkness,
+						and the weeping and wailing and teeth-gnashing there. Ha, Ishmael,
+						muttered I, backing out, Wretched entertainment at the sign of
+						&lsquo;The Trap!&rsquo;
+					</p>
+					<p><br /></p>
+					<p>
+						Moving on, I at last came to a dim sort of light not far from the
+						docks, and heard a forlorn creaking in the air; and looking up, saw
+						a swinging sign over the door with a white painting upon it, faintly
+						representing a tall straight jet of misty spray, and these words
+						underneath&mdash;&ldquo;The Spouter Inn:&mdash;Peter Coffin.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						Coffin?&mdash;Spouter?&mdash;Rather ominous in that particular
+						connexion, thought I. But it is a common name in Nantucket, they
+						say, and I suppose this Peter here is an emigrant from there. As the
+						light looked so dim, and the place, for the time, looked quiet
+						enough, and the dilapidated little wooden house itself looked as if
+						it might have been carted here from the ruins of some burnt
+						district, and as the swinging sign had a poverty-stricken sort of
+						creak to it, I thought that here was the very spot for cheap
+						lodgings, and the best of pea coffee.
+					</p>
+					<p><br /></p>
+					<p>
+						It was a queer sort of place&mdash;a gable-ended old house, one side
+						palsied as it were, and leaning over sadly. It stood on a sharp
+						bleak corner, where that tempestuous wind Euroclydon kept up a worse
+						howling than ever it did about poor Paul&rsquo;s tossed craft.
+						Euroclydon, nevertheless, is a mighty pleasant zephyr to any one
+						in-doors, with his feet on the hob quietly toasting for bed.
+						&ldquo;In judging of that tempestuous wind called Euroclydon,&rdquo;
+						says an old writer&mdash;of whose works I possess the only copy
+						extant&mdash;&ldquo;it maketh a marvellous difference, whether thou
+						lookest out at it from a glass window where the frost is all on the
+						outside, or whether thou observest it from that sashless window,
+						where the frost is on both sides, and of which the wight Death is
+						the only glazier.&rdquo; True enough, thought I, as this passage
+						occurred to my mind&mdash;old black-letter, thou reasonest well.
+						Yes, these eyes are windows, and this body of mine is the house.
+						What a pity they didn&rsquo;t stop up the chinks and the crannies
+						though, and thrust in a little lint here and there. But it&rsquo;s
+						too late to make any improvements now. The universe is finished; the
+						copestone is on, and the chips were carted off a million years ago.
+						Poor Lazarus there, chattering his teeth against the curbstone for
+						his pillow, and shaking off his tatters with his shiverings, he
+						might plug up both ears with rags, and put a corn-cob into his
+						mouth, and yet that would not keep out the tempestuous Euroclydon.
+						Euroclydon! says old Dives, in his red silken wrapper&mdash;(he had
+						a redder one afterwards) pooh, pooh! What a fine frosty night; how
+						Orion glitters; what northern lights! Let them talk of their
+						oriental summer climes of everlasting conservatories; give me the
+						privilege of making my own summer with my own coals.
+					</p>
+					<p><br /></p>
+					<p>
+						But what thinks Lazarus? Can he warm his blue hands by holding them
+						up to the grand northern lights? Would not Lazarus rather be in
+						Sumatra than here? Would he not far rather lay him down lengthwise
+						along the line of the equator; yea, ye gods! go down to the fiery
+						pit itself, in order to keep out this frost?
+					</p>
+					<p><br /></p>
+					<p>
+						Now, that Lazarus should lie stranded there on the curbstone before
+						the door of Dives, this is more wonderful than that an iceberg
+						should be moored to one of the Moluccas. Yet Dives himself, he too
+						lives like a Czar in an ice palace made of frozen sighs, and being a
+						president of a temperance society, he only drinks the tepid tears of
+						orphans.
+					</p>
+					<p><br /></p>
+					<p>
+						But no more of this blubbering now, we are going a-whaling, and
+						there is plenty of that yet to come. Let us scrape the ice from our
+						frosted feet, and see what sort of a place this
+						&ldquo;Spouter&rdquo; may be.
+					</p>
+					<p><br /></p>
+					<p><br /></p>
+					<p><br /></p>
+					<p><br /></p>
+					<p><br /></p>
+					<p>CHAPTER 3. The Spouter-Inn.</p>
+					<p><br /></p>
+					<p>
+						Entering that gable-ended Spouter-Inn, you found yourself in a wide,
+						low, straggling entry with old-fashioned wainscots, reminding one of
+						the bulwarks of some condemned old craft. On one side hung a very
+						large oilpainting so thoroughly besmoked, and every way defaced,
+						that in the unequal crosslights by which you viewed it, it was only
+						by diligent study and a series of systematic visits to it, and
+						careful inquiry of the neighbors, that you could any way arrive at
+						an understanding of its purpose. Such unaccountable masses of shades
+						and shadows, that at first you almost thought some ambitious young
+						artist, in the time of the New England hags, had endeavored to
+						delineate chaos bewitched. But by dint of much and earnest
+						contemplation, and oft repeated ponderings, and especially by
+						throwing open the little window towards the back of the entry, you
+						at last come to the conclusion that such an idea, however wild,
+						might not be altogether unwarranted.
+					</p>
+					<p><br /></p>
+					<p>
+						But what most puzzled and confounded you was a long, limber,
+						portentous, black mass of something hovering in the centre of the
+						picture over three blue, dim, perpendicular lines floating in a
+						nameless yeast. A boggy, soggy, squitchy picture truly, enough to
+						drive a nervous man distracted. Yet was there a sort of indefinite,
+						half-attained, unimaginable sublimity about it that fairly froze you
+						to it, till you involuntarily took an oath with yourself to find out
+						what that marvellous painting meant. Ever and anon a bright, but,
+						alas, deceptive idea would dart you through.&mdash;It&rsquo;s the
+						Black Sea in a midnight gale.&mdash;It&rsquo;s the unnatural combat
+						of the four primal elements.&mdash;It&rsquo;s a blasted
+						heath.&mdash;It&rsquo;s a Hyperborean winter scene.&mdash;It&rsquo;s
+						the breaking-up of the icebound stream of Time. But at last all
+						these fancies yielded to that one portentous something in the
+						picture&rsquo;s midst. That once found out, and all the rest were
+						plain. But stop; does it not bear a faint resemblance to a gigantic
+						fish? even the great leviathan himself?
+					</p>
+					<p><br /></p>
+					<p>
+						In fact, the artist&rsquo;s design seemed this: a final theory of my
+						own, partly based upon the aggregated opinions of many aged persons
+						with whom I conversed upon the subject. The picture represents a
+						Cape-Horner in a great hurricane; the half-foundered ship weltering
+						there with its three dismantled masts alone visible; and an
+						exasperated whale, purposing to spring clean over the craft, is in
+						the enormous act of impaling himself upon the three mast-heads.
+					</p>
+					<p><br /></p>
+					<p>
+						The opposite wall of this entry was hung all over with a heathenish
+						array of monstrous clubs and spears. Some were thickly set with
+						glittering teeth resembling ivory saws; others were tufted with
+						knots of human hair; and one was sickle-shaped, with a vast handle
+						sweeping round like the segment made in the new-mown grass by a
+						long-armed mower. You shuddered as you gazed, and wondered what
+						monstrous cannibal and savage could ever have gone a
+						death-harvesting with such a hacking, horrifying implement. Mixed
+						with these were rusty old whaling lances and harpoons all broken and
+						deformed. Some were storied weapons. With this once long lance, now
+						wildly elbowed, fifty years ago did Nathan Swain kill fifteen whales
+						between a sunrise and a sunset. And that harpoon&mdash;so like a
+						corkscrew now&mdash;was flung in Javan seas, and run away with by a
+						whale, years afterwards slain off the Cape of Blanco. The original
+						iron entered nigh the tail, and, like a restless needle sojourning
+						in the body of a man, travelled full forty feet, and at last was
+						found imbedded in the hump.
+					</p>
+					<p><br /></p>
+					<p>
+						Crossing this dusky entry, and on through yon low-arched
+						way&mdash;cut through what in old times must have been a great
+						central chimney with fireplaces all round&mdash;you enter the public
+						room. A still duskier place is this, with such low ponderous beams
+						above, and such old wrinkled planks beneath, that you would almost
+						fancy you trod some old craft&rsquo;s cockpits, especially of such a
+						howling night, when this corner-anchored old ark rocked so
+						furiously. On one side stood a long, low, shelf-like table covered
+						with cracked glass cases, filled with dusty rarities gathered from
+						this wide world&rsquo;s remotest nooks. Projecting from the further
+						angle of the room stands a dark-looking den&mdash;the bar&mdash;a
+						rude attempt at a right whale&rsquo;s head. Be that how it may,
+						there stands the vast arched bone of the whale&rsquo;s jaw, so wide,
+						a coach might almost drive beneath it. Within are shabby shelves,
+						ranged round with old decanters, bottles, flasks; and in those jaws
+						of swift destruction, like another cursed Jonah (by which name
+						indeed they called him), bustles a little withered old man, who, for
+						their money, dearly sells the sailors deliriums and death.
+					</p>
+					<p><br /></p>
+					<p>
+						Abominable are the tumblers into which he pours his poison. Though
+						true cylinders without&mdash;within, the villanous green goggling
+						glasses deceitfully tapered downwards to a cheating bottom. Parallel
+						meridians rudely pecked into the glass, surround these
+						footpads&rsquo; goblets. Fill to this mark, and your charge is but a
+						penny; to this a penny more; and so on to the full glass&mdash;the
+						Cape Horn measure, which you may gulp down for a shilling.
+					</p>
+					<p><br /></p>
+					<p>
+						Upon entering the place I found a number of young seamen gathered
+						about a table, examining by a dim light divers specimens of
+						skrimshander. I sought the landlord, and telling him I desired to be
+						accommodated with a room, received for answer that his house was
+						full&mdash;not a bed unoccupied. &ldquo;But avast,&rdquo; he added,
+						tapping his forehead, &ldquo;you haint no objections to sharing a
+						harpooneer&rsquo;s blanket, have ye? I s&rsquo;pose you are
+						goin&rsquo; a-whalin&rsquo;, so you&rsquo;d better get used to that
+						sort of thing.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						I told him that I never liked to sleep two in a bed; that if I
+						should ever do so, it would depend upon who the harpooneer might be,
+						and that if he (the landlord) really had no other place for me, and
+						the harpooneer was not decidedly objectionable, why rather than
+						wander further about a strange town on so bitter a night, I would
+						put up with the half of any decent man&rsquo;s blanket.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;I thought so. All right; take a seat. Supper?&mdash;you want
+						supper? Supper&rsquo;ll be ready directly.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						I sat down on an old wooden settle, carved all over like a bench on
+						the Battery. At one end a ruminating tar was still further adorning
+						it with his jack-knife, stooping over and diligently working away at
+						the space between his legs. He was trying his hand at a ship under
+						full sail, but he didn&rsquo;t make much headway, I thought.
+					</p>
+					<p><br /></p>
+					<p>
+						At last some four or five of us were summoned to our meal in an
+						adjoining room. It was cold as Iceland&mdash;no fire at
+						all&mdash;the landlord said he couldn&rsquo;t afford it. Nothing but
+						two dismal tallow candles, each in a winding sheet. We were fain to
+						button up our monkey jackets, and hold to our lips cups of scalding
+						tea with our half frozen fingers. But the fare was of the most
+						substantial kind&mdash;not only meat and potatoes, but dumplings;
+						good heavens! dumplings for supper! One young fellow in a green box
+						coat, addressed himself to these dumplings in a most direful manner.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;My boy,&rdquo; said the landlord, &ldquo;you&rsquo;ll have
+						the nightmare to a dead sartainty.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Landlord,&rdquo; I whispered, &ldquo;that aint the harpooneer
+						is it?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Oh, no,&rdquo; said he, looking a sort of diabolically funny,
+						&ldquo;the harpooneer is a dark complexioned chap. He never eats
+						dumplings, he don&rsquo;t&mdash;he eats nothing but steaks, and he
+						likes &rsquo;em rare.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;The devil he does,&rdquo; says I. &ldquo;Where is that
+						harpooneer? Is he here?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>&ldquo;He&rsquo;ll be here afore long,&rdquo; was the answer.</p>
+					<p><br /></p>
+					<p>
+						I could not help it, but I began to feel suspicious of this
+						&ldquo;dark complexioned&rdquo; harpooneer. At any rate, I made up
+						my mind that if it so turned out that we should sleep together, he
+						must undress and get into bed before I did.
+					</p>
+					<p><br /></p>
+					<p>
+						Supper over, the company went back to the bar-room, when, knowing
+						not what else to do with myself, I resolved to spend the rest of the
+						evening as a looker on.
+					</p>
+					<p><br /></p>
+					<p>
+						Presently a rioting noise was heard without. Starting up, the
+						landlord cried, &ldquo;That&rsquo;s the Grampus&rsquo;s crew. I seed
+						her reported in the offing this morning; a three years&rsquo;
+						voyage, and a full ship. Hurrah, boys; now we&rsquo;ll have the
+						latest news from the Feegees.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						A tramping of sea boots was heard in the entry; the door was flung
+						open, and in rolled a wild set of mariners enough. Enveloped in
+						their shaggy watch coats, and with their heads muffled in woollen
+						comforters, all bedarned and ragged, and their beards stiff with
+						icicles, they seemed an eruption of bears from Labrador. They had
+						just landed from their boat, and this was the first house they
+						entered. No wonder, then, that they made a straight wake for the
+						whale&rsquo;s mouth&mdash;the bar&mdash;when the wrinkled little old
+						Jonah, there officiating, soon poured them out brimmers all round.
+						One complained of a bad cold in his head, upon which Jonah mixed him
+						a pitch-like potion of gin and molasses, which he swore was a
+						sovereign cure for all colds and catarrhs whatsoever, never mind of
+						how long standing, or whether caught off the coast of Labrador, or
+						on the weather side of an ice-island.
+					</p>
+					<p><br /></p>
+					<p>
+						The liquor soon mounted into their heads, as it generally does even
+						with the arrantest topers newly landed from sea, and they began
+						capering about most obstreperously.
+					</p>
+					<p><br /></p>
+					<p>
+						I observed, however, that one of them held somewhat aloof, and
+						though he seemed desirous not to spoil the hilarity of his shipmates
+						by his own sober face, yet upon the whole he refrained from making
+						as much noise as the rest. This man interested me at once; and since
+						the sea-gods had ordained that he should soon become my shipmate
+						(though but a sleeping-partner one, so far as this narrative is
+						concerned), I will here venture upon a little description of him. He
+						stood full six feet in height, with noble shoulders, and a chest
+						like a coffer-dam. I have seldom seen such brawn in a man. His face
+						was deeply brown and burnt, making his white teeth dazzling by the
+						contrast; while in the deep shadows of his eyes floated some
+						reminiscences that did not seem to give him much joy. His voice at
+						once announced that he was a Southerner, and from his fine stature,
+						I thought he must be one of those tall mountaineers from the
+						Alleghanian Ridge in Virginia. When the revelry of his companions
+						had mounted to its height, this man slipped away unobserved, and I
+						saw no more of him till he became my comrade on the sea. In a few
+						minutes, however, he was missed by his shipmates, and being, it
+						seems, for some reason a huge favourite with them, they raised a cry
+						of &ldquo;Bulkington! Bulkington! where&rsquo;s Bulkington?&rdquo;
+						and darted out of the house in pursuit of him.
+					</p>
+					<p><br /></p>
+					<p>
+						It was now about nine o&rsquo;clock, and the room seeming almost
+						supernaturally quiet after these orgies, I began to congratulate
+						myself upon a little plan that had occurred to me just previous to
+						the entrance of the seamen.
+					</p>
+					<p><br /></p>
+					<p>
+						No man prefers to sleep two in a bed. In fact, you would a good deal
+						rather not sleep with your own brother. I don&rsquo;t know how it
+						is, but people like to be private when they are sleeping. And when
+						it comes to sleeping with an unknown stranger, in a strange inn, in
+						a strange town, and that stranger a harpooneer, then your objections
+						indefinitely multiply. Nor was there any earthly reason why I as a
+						sailor should sleep two in a bed, more than anybody else; for
+						sailors no more sleep two in a bed at sea, than bachelor Kings do
+						ashore. To be sure they all sleep together in one apartment, but you
+						have your own hammock, and cover yourself with your own blanket, and
+						sleep in your own skin.
+					</p>
+					<p><br /></p>
+					<p>
+						The more I pondered over this harpooneer, the more I abominated the
+						thought of sleeping with him. It was fair to presume that being a
+						harpooneer, his linen or woollen, as the case might be, would not be
+						of the tidiest, certainly none of the finest. I began to twitch all
+						over. Besides, it was getting late, and my decent harpooneer ought
+						to be home and going bedwards. Suppose now, he should tumble in upon
+						me at midnight&mdash;how could I tell from what vile hole he had
+						been coming?
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Landlord! I&rsquo;ve changed my mind about that
+						harpooneer.&mdash;I shan&rsquo;t sleep with him. I&rsquo;ll try the
+						bench here.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Just as you please; I&rsquo;m sorry I can&rsquo;t spare ye a
+						tablecloth for a mattress, and it&rsquo;s a plaguy rough board
+						here&rdquo;&mdash;feeling of the knots and notches. &ldquo;But wait
+						a bit, Skrimshander; I&rsquo;ve got a carpenter&rsquo;s plane there
+						in the bar&mdash;wait, I say, and I&rsquo;ll make ye snug
+						enough.&rdquo; So saying he procured the plane; and with his old
+						silk handkerchief first dusting the bench, vigorously set to planing
+						away at my bed, the while grinning like an ape. The shavings flew
+						right and left; till at last the plane-iron came bump against an
+						indestructible knot. The landlord was near spraining his wrist, and
+						I told him for heaven&rsquo;s sake to quit&mdash;the bed was soft
+						enough to suit me, and I did not know how all the planing in the
+						world could make eider down of a pine plank. So gathering up the
+						shavings with another grin, and throwing them into the great stove
+						in the middle of the room, he went about his business, and left me
+						in a brown study.
+					</p>
+					<p><br /></p>
+					<p>
+						I now took the measure of the bench, and found that it was a foot
+						too short; but that could be mended with a chair. But it was a foot
+						too narrow, and the other bench in the room was about four inches
+						higher than the planed one&mdash;so there was no yoking them. I then
+						placed the first bench lengthwise along the only clear space against
+						the wall, leaving a little interval between, for my back to settle
+						down in. But I soon found that there came such a draught of cold air
+						over me from under the sill of the window, that this plan would
+						never do at all, especially as another current from the rickety door
+						met the one from the window, and both together formed a series of
+						small whirlwinds in the immediate vicinity of the spot where I had
+						thought to spend the night.
+					</p>
+					<p><br /></p>
+					<p>
+						The devil fetch that harpooneer, thought I, but stop, couldn&rsquo;t
+						I steal a march on him&mdash;bolt his door inside, and jump into his
+						bed, not to be wakened by the most violent knockings? It seemed no
+						bad idea; but upon second thoughts I dismissed it. For who could
+						tell but what the next morning, so soon as I popped out of the room,
+						the harpooneer might be standing in the entry, all ready to knock me
+						down!
+					</p>
+					<p><br /></p>
+					<p>
+						Still, looking round me again, and seeing no possible chance of
+						spending a sufferable night unless in some other person&rsquo;s bed,
+						I began to think that after all I might be cherishing unwarrantable
+						prejudices against this unknown harpooneer. Thinks I, I&rsquo;ll
+						wait awhile; he must be dropping in before long. I&rsquo;ll have a
+						good look at him then, and perhaps we may become jolly good
+						bedfellows after all&mdash;there&rsquo;s no telling.
+					</p>
+					<p><br /></p>
+					<p>
+						But though the other boarders kept coming in by ones, twos, and
+						threes, and going to bed, yet no sign of my harpooneer.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Landlord!&rdquo; said I, &ldquo;what sort of a chap is
+						he&mdash;does he always keep such late hours?&rdquo; It was now hard
+						upon twelve o&rsquo;clock.
+					</p>
+					<p><br /></p>
+					<p>
+						The landlord chuckled again with his lean chuckle, and seemed to be
+						mightily tickled at something beyond my comprehension.
+						&ldquo;No,&rdquo; he answered, &ldquo;generally he&rsquo;s an early
+						bird&mdash;airley to bed and airley to rise&mdash;yes, he&rsquo;s
+						the bird what catches the worm. But to-night he went out a peddling,
+						you see, and I don&rsquo;t see what on airth keeps him so late,
+						unless, may be, he can&rsquo;t sell his head.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Can&rsquo;t sell his head?&mdash;What sort of a bamboozingly
+						story is this you are telling me?&rdquo; getting into a towering
+						rage. &ldquo;Do you pretend to say, landlord, that this harpooneer
+						is actually engaged this blessed Saturday night, or rather Sunday
+						morning, in peddling his head around this town?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;That&rsquo;s precisely it,&rdquo; said the landlord,
+						&ldquo;and I told him he couldn&rsquo;t sell it here, the
+						market&rsquo;s overstocked.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>&ldquo;With what?&rdquo; shouted I.</p>
+					<p><br /></p>
+					<p>
+						&ldquo;With heads to be sure; ain&rsquo;t there too many heads in
+						the world?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;I tell you what it is, landlord,&rdquo; said I quite calmly,
+						&ldquo;you&rsquo;d better stop spinning that yarn to
+						me&mdash;I&rsquo;m not green.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;May be not,&rdquo; taking out a stick and whittling a
+						toothpick, &ldquo;but I rayther guess you&rsquo;ll be done brown if
+						that ere harpooneer hears you a slanderin&rsquo; his head.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;I&rsquo;ll break it for him,&rdquo; said I, now flying into a
+						passion again at this unaccountable farrago of the landlord&rsquo;s.
+					</p>
+					<p><br /></p>
+					<p>&ldquo;It&rsquo;s broke a&rsquo;ready,&rdquo; said he.</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Broke,&rdquo; said I&mdash;&ldquo;broke, do you mean?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Sartain, and that&rsquo;s the very reason he can&rsquo;t sell
+						it, I guess.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Landlord,&rdquo; said I, going up to him as cool as Mt. Hecla
+						in a snow-storm&mdash;&ldquo;landlord, stop whittling. You and I
+						must understand one another, and that too without delay. I come to
+						your house and want a bed; you tell me you can only give me half a
+						one; that the other half belongs to a certain harpooneer. And about
+						this harpooneer, whom I have not yet seen, you persist in telling me
+						the most mystifying and exasperating stories tending to beget in me
+						an uncomfortable feeling towards the man whom you design for my
+						bedfellow&mdash;a sort of connexion, landlord, which is an intimate
+						and confidential one in the highest degree. I now demand of you to
+						speak out and tell me who and what this harpooneer is, and whether I
+						shall be in all respects safe to spend the night with him. And in
+						the first place, you will be so good as to unsay that story about
+						selling his head, which if true I take to be good evidence that this
+						harpooneer is stark mad, and I&rsquo;ve no idea of sleeping with a
+						madman; and you, sir, you I mean, landlord, you, sir, by trying to
+						induce me to do so knowingly, would thereby render yourself liable
+						to a criminal prosecution.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Wall,&rdquo; said the landlord, fetching a long breath,
+						&ldquo;that&rsquo;s a purty long sarmon for a chap that rips a
+						little now and then. But be easy, be easy, this here harpooneer I
+						have been tellin&rsquo; you of has just arrived from the south seas,
+						where he bought up a lot of &rsquo;balmed New Zealand heads (great
+						curios, you know), and he&rsquo;s sold all on &rsquo;em but one, and
+						that one he&rsquo;s trying to sell to-night, cause to-morrow&rsquo;s
+						Sunday, and it would not do to be sellin&rsquo; human heads about
+						the streets when folks is goin&rsquo; to churches. He wanted to,
+						last Sunday, but I stopped him just as he was goin&rsquo; out of the
+						door with four heads strung on a string, for all the airth like a
+						string of inions.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						This account cleared up the otherwise unaccountable mystery, and
+						showed that the landlord, after all, had had no idea of fooling
+						me&mdash;but at the same time what could I think of a harpooneer who
+						stayed out of a Saturday night clean into the holy Sabbath, engaged
+						in such a cannibal business as selling the heads of dead idolators?
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Depend upon it, landlord, that harpooneer is a dangerous
+						man.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;He pays reg&rsquo;lar,&rdquo; was the rejoinder. &ldquo;But
+						come, it&rsquo;s getting dreadful late, you had better be turning
+						flukes&mdash;it&rsquo;s a nice bed; Sal and me slept in that ere bed
+						the night we were spliced. There&rsquo;s plenty of room for two to
+						kick about in that bed; it&rsquo;s an almighty big bed that. Why,
+						afore we give it up, Sal used to put our Sam and little Johnny in
+						the foot of it. But I got a dreaming and sprawling about one night,
+						and somehow, Sam got pitched on the floor, and came near breaking
+						his arm. Arter that, Sal said it wouldn&rsquo;t do. Come along here,
+						I&rsquo;ll give ye a glim in a jiffy;&rdquo; and so saying he
+						lighted a candle and held it towards me, offering to lead the way.
+						But I stood irresolute; when looking at a clock in the corner, he
+						exclaimed &ldquo;I vum it&rsquo;s Sunday&mdash;you won&rsquo;t see
+						that harpooneer to-night; he&rsquo;s come to anchor
+						somewhere&mdash;come along then; do come; won&rsquo;t ye
+						come?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						I considered the matter a moment, and then up stairs we went, and I
+						was ushered into a small room, cold as a clam, and furnished, sure
+						enough, with a prodigious bed, almost big enough indeed for any four
+						harpooneers to sleep abreast.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;There,&rdquo; said the landlord, placing the candle on a
+						crazy old sea chest that did double duty as a wash-stand and centre
+						table; &ldquo;there, make yourself comfortable now, and good night
+						to ye.&rdquo; I turned round from eyeing the bed, but he had
+						disappeared.
+					</p>
+					<p><br /></p>
+					<p>
+						Folding back the counterpane, I stooped over the bed. Though none of
+						the most elegant, it yet stood the scrutiny tolerably well. I then
+						glanced round the room; and besides the bedstead and centre table,
+						could see no other furniture belonging to the place, but a rude
+						shelf, the four walls, and a papered fireboard representing a man
+						striking a whale. Of things not properly belonging to the room,
+						there was a hammock lashed up, and thrown upon the floor in one
+						corner; also a large seaman&rsquo;s bag, containing the
+						harpooneer&rsquo;s wardrobe, no doubt in lieu of a land trunk.
+						Likewise, there was a parcel of outlandish bone fish hooks on the
+						shelf over the fire-place, and a tall harpoon standing at the head
+						of the bed.
+					</p>
+					<p><br /></p>
+					<p>
+						But what is this on the chest? I took it up, and held it close to
+						the light, and felt it, and smelt it, and tried every way possible
+						to arrive at some satisfactory conclusion concerning it. I can
+						compare it to nothing but a large door mat, ornamented at the edges
+						with little tinkling tags something like the stained porcupine
+						quills round an Indian moccasin. There was a hole or slit in the
+						middle of this mat, as you see the same in South American ponchos.
+						But could it be possible that any sober harpooneer would get into a
+						door mat, and parade the streets of any Christian town in that sort
+						of guise? I put it on, to try it, and it weighed me down like a
+						hamper, being uncommonly shaggy and thick, and I thought a little
+						damp, as though this mysterious harpooneer had been wearing it of a
+						rainy day. I went up in it to a bit of glass stuck against the wall,
+						and I never saw such a sight in my life. I tore myself out of it in
+						such a hurry that I gave myself a kink in the neck.
+					</p>
+					<p><br /></p>
+					<p>
+						I sat down on the side of the bed, and commenced thinking about this
+						head-peddling harpooneer, and his door mat. After thinking some time
+						on the bed-side, I got up and took off my monkey jacket, and then
+						stood in the middle of the room thinking. I then took off my coat,
+						and thought a little more in my shirt sleeves. But beginning to feel
+						very cold now, half undressed as I was, and remembering what the
+						landlord said about the harpooneer&rsquo;s not coming home at all
+						that night, it being so very late, I made no more ado, but jumped
+						out of my pantaloons and boots, and then blowing out the light
+						tumbled into bed, and commended myself to the care of heaven.
+					</p>
+					<p><br /></p>
+					<p>
+						Whether that mattress was stuffed with corn-cobs or broken crockery,
+						there is no telling, but I rolled about a good deal, and could not
+						sleep for a long time. At last I slid off into a light doze, and had
+						pretty nearly made a good offing towards the land of Nod, when I
+						heard a heavy footfall in the passage, and saw a glimmer of light
+						come into the room from under the door.
+					</p>
+					<p><br /></p>
+					<p>
+						Lord save me, thinks I, that must be the harpooneer, the infernal
+						head-peddler. But I lay perfectly still, and resolved not to say a
+						word till spoken to. Holding a light in one hand, and that identical
+						New Zealand head in the other, the stranger entered the room, and
+						without looking towards the bed, placed his candle a good way off
+						from me on the floor in one corner, and then began working away at
+						the knotted cords of the large bag I before spoke of as being in the
+						room. I was all eagerness to see his face, but he kept it averted
+						for some time while employed in unlacing the bag&rsquo;s mouth. This
+						accomplished, however, he turned round&mdash;when, good heavens!
+						what a sight! Such a face! It was of a dark, purplish, yellow
+						colour, here and there stuck over with large blackish looking
+						squares. Yes, it&rsquo;s just as I thought, he&rsquo;s a terrible
+						bedfellow; he&rsquo;s been in a fight, got dreadfully cut, and here
+						he is, just from the surgeon. But at that moment he chanced to turn
+						his face so towards the light, that I plainly saw they could not be
+						sticking-plasters at all, those black squares on his cheeks. They
+						were stains of some sort or other. At first I knew not what to make
+						of this; but soon an inkling of the truth occurred to me. I
+						remembered a story of a white man&mdash;a whaleman too&mdash;who,
+						falling among the cannibals, had been tattooed by them. I concluded
+						that this harpooneer, in the course of his distant voyages, must
+						have met with a similar adventure. And what is it, thought I, after
+						all! It&rsquo;s only his outside; a man can be honest in any sort of
+						skin. But then, what to make of his unearthly complexion, that part
+						of it, I mean, lying round about, and completely independent of the
+						squares of tattooing. To be sure, it might be nothing but a good
+						coat of tropical tanning; but I never heard of a hot sun&rsquo;s
+						tanning a white man into a purplish yellow one. However, I had never
+						been in the South Seas; and perhaps the sun there produced these
+						extraordinary effects upon the skin. Now, while all these ideas were
+						passing through me like lightning, this harpooneer never noticed me
+						at all. But, after some difficulty having opened his bag, he
+						commenced fumbling in it, and presently pulled out a sort of
+						tomahawk, and a seal-skin wallet with the hair on. Placing these on
+						the old chest in the middle of the room, he then took the New
+						Zealand head&mdash;a ghastly thing enough&mdash;and crammed it down
+						into the bag. He now took off his hat&mdash;a new beaver
+						hat&mdash;when I came nigh singing out with fresh surprise. There
+						was no hair on his head&mdash;none to speak of at
+						least&mdash;nothing but a small scalp-knot twisted up on his
+						forehead. His bald purplish head now looked for all the world like a
+						mildewed skull. Had not the stranger stood between me and the door,
+						I would have bolted out of it quicker than ever I bolted a dinner.
+					</p>
+					<p><br /></p>
+					<p>
+						Even as it was, I thought something of slipping out of the window,
+						but it was the second floor back. I am no coward, but what to make
+						of this head-peddling purple rascal altogether passed my
+						comprehension. Ignorance is the parent of fear, and being completely
+						nonplussed and confounded about the stranger, I confess I was now as
+						much afraid of him as if it was the devil himself who had thus
+						broken into my room at the dead of night. In fact, I was so afraid
+						of him that I was not game enough just then to address him, and
+						demand a satisfactory answer concerning what seemed inexplicable in
+						him.
+					</p>
+					<p><br /></p>
+					<p>
+						Meanwhile, he continued the business of undressing, and at last
+						showed his chest and arms. As I live, these covered parts of him
+						were checkered with the same squares as his face; his back, too, was
+						all over the same dark squares; he seemed to have been in a Thirty
+						Years&rsquo; War, and just escaped from it with a sticking-plaster
+						shirt. Still more, his very legs were marked, as if a parcel of dark
+						green frogs were running up the trunks of young palms. It was now
+						quite plain that he must be some abominable savage or other shipped
+						aboard of a whaleman in the South Seas, and so landed in this
+						Christian country. I quaked to think of it. A peddler of heads
+						too&mdash;perhaps the heads of his own brothers. He might take a
+						fancy to mine&mdash;heavens! look at that tomahawk!
+					</p>
+					<p><br /></p>
+					<p>
+						But there was no time for shuddering, for now the savage went about
+						something that completely fascinated my attention, and convinced me
+						that he must indeed be a heathen. Going to his heavy grego, or
+						wrapall, or dreadnaught, which he had previously hung on a chair, he
+						fumbled in the pockets, and produced at length a curious little
+						deformed image with a hunch on its back, and exactly the colour of a
+						three days&rsquo; old Congo baby. Remembering the embalmed head, at
+						first I almost thought that this black manikin was a real baby
+						preserved in some similar manner. But seeing that it was not at all
+						limber, and that it glistened a good deal like polished ebony, I
+						concluded that it must be nothing but a wooden idol, which indeed it
+						proved to be. For now the savage goes up to the empty fire-place,
+						and removing the papered fire-board, sets up this little
+						hunch-backed image, like a tenpin, between the andirons. The chimney
+						jambs and all the bricks inside were very sooty, so that I thought
+						this fire-place made a very appropriate little shrine or chapel for
+						his Congo idol.
+					</p>
+					<p><br /></p>
+					<p>
+						I now screwed my eyes hard towards the half hidden image, feeling
+						but ill at ease meantime&mdash;to see what was next to follow. First
+						he takes about a double handful of shavings out of his grego pocket,
+						and places them carefully before the idol; then laying a bit of ship
+						biscuit on top and applying the flame from the lamp, he kindled the
+						shavings into a sacrificial blaze. Presently, after many hasty
+						snatches into the fire, and still hastier withdrawals of his fingers
+						(whereby he seemed to be scorching them badly), he at last succeeded
+						in drawing out the biscuit; then blowing off the heat and ashes a
+						little, he made a polite offer of it to the little negro. But the
+						little devil did not seem to fancy such dry sort of fare at all; he
+						never moved his lips. All these strange antics were accompanied by
+						still stranger guttural noises from the devotee, who seemed to be
+						praying in a sing-song or else singing some pagan psalmody or other,
+						during which his face twitched about in the most unnatural manner.
+						At last extinguishing the fire, he took the idol up very
+						unceremoniously, and bagged it again in his grego pocket as
+						carelessly as if he were a sportsman bagging a dead woodcock.
+					</p>
+					<p><br /></p>
+					<p>
+						All these queer proceedings increased my uncomfortableness, and
+						seeing him now exhibiting strong symptoms of concluding his business
+						operations, and jumping into bed with me, I thought it was high
+						time, now or never, before the light was put out, to break the spell
+						in which I had so long been bound.
+					</p>
+					<p><br /></p>
+					<p>
+						But the interval I spent in deliberating what to say, was a fatal
+						one. Taking up his tomahawk from the table, he examined the head of
+						it for an instant, and then holding it to the light, with his mouth
+						at the handle, he puffed out great clouds of tobacco smoke. The next
+						moment the light was extinguished, and this wild cannibal, tomahawk
+						between his teeth, sprang into bed with me. I sang out, I could not
+						help it now; and giving a sudden grunt of astonishment he began
+						feeling me.
+					</p>
+					<p><br /></p>
+					<p>
+						Stammering out something, I knew not what, I rolled away from him
+						against the wall, and then conjured him, whoever or whatever he
+						might be, to keep quiet, and let me get up and light the lamp again.
+						But his guttural responses satisfied me at once that he but ill
+						comprehended my meaning.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Who-e debel you?&rdquo;&mdash;he at last
+						said&mdash;&ldquo;you no speak-e, dam-me, I kill-e.&rdquo; And so
+						saying the lighted tomahawk began flourishing about me in the dark.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Landlord, for God&rsquo;s sake, Peter Coffin!&rdquo; shouted
+						I. &ldquo;Landlord! Watch! Coffin! Angels! save me!&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Speak-e! tell-ee me who-ee be, or dam-me, I kill-e!&rdquo;
+						again growled the cannibal, while his horrid flourishings of the
+						tomahawk scattered the hot tobacco ashes about me till I thought my
+						linen would get on fire. But thank heaven, at that moment the
+						landlord came into the room light in hand, and leaping from the bed
+						I ran up to him.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Don&rsquo;t be afraid now,&rdquo; said he, grinning again,
+						&ldquo;Queequeg here wouldn&rsquo;t harm a hair of your head.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Stop your grinning,&rdquo; shouted I, &ldquo;and why
+						didn&rsquo;t you tell me that that infernal harpooneer was a
+						cannibal?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;I thought ye know&rsquo;d it;&mdash;didn&rsquo;t I tell ye,
+						he was a peddlin&rsquo; heads around town?&mdash;but turn flukes
+						again and go to sleep. Queequeg, look here&mdash;you sabbee me, I
+						sabbee&mdash;you this man sleepe you&mdash;you sabbee?&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Me sabbee plenty&rdquo;&mdash;grunted Queequeg, puffing away
+						at his pipe and sitting up in bed.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;You gettee in,&rdquo; he added, motioning to me with his
+						tomahawk, and throwing the clothes to one side. He really did this
+						in not only a civil but a really kind and charitable way. I stood
+						looking at him a moment. For all his tattooings he was on the whole
+						a clean, comely looking cannibal. What&rsquo;s all this fuss I have
+						been making about, thought I to myself&mdash;the man&rsquo;s a human
+						being just as I am: he has just as much reason to fear me, as I have
+						to be afraid of him. Better sleep with a sober cannibal than a
+						drunken Christian.
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Landlord,&rdquo; said I, &ldquo;tell him to stash his
+						tomahawk there, or pipe, or whatever you call it; tell him to stop
+						smoking, in short, and I will turn in with him. But I don&rsquo;t
+						fancy having a man smoking in bed with me. It&rsquo;s dangerous.
+						Besides, I ain&rsquo;t insured.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						This being told to Queequeg, he at once complied, and again politely
+						motioned me to get into bed&mdash;rolling over to one side as much
+						as to say&mdash;&ldquo;I won&rsquo;t touch a leg of ye.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>
+						&ldquo;Good night, landlord,&rdquo; said I, &ldquo;you may
+						go.&rdquo;
+					</p>
+					<p><br /></p>
+					<p>I turned in, and never slept better in my life.</p>
+					<p><br /></p>
+					<p><br /></p>
+				</main>
 			</div>
-			<!-- end container -->
+			<!-- end admin dashboard -->
 		</div>
+		<!-- end container -->
 
 		<!-- SVGs -->
 		<svg style="display: none">
 			<symbol id="home-icon">
 				<path
 					d="M9.99698 5.30322L2.86408 11.3488C2.86408 11.3574 2.86199 11.3699 2.85782 11.387C2.85374 11.404 2.85156 11.4163 2.85156 11.4251V17.5469C2.85156 17.768 2.93016 17.9595 3.08732 18.1208C3.24444 18.2822 3.43049 18.3634 3.64553 18.3634H8.40897V13.4658H11.585V18.3636H16.3484C16.5634 18.3636 16.7497 18.2826 16.9066 18.1208C17.0638 17.9597 17.1427 17.768 17.1427 17.5469V11.4251C17.1427 11.3912 17.1381 11.3655 17.1302 11.3488L9.99698 5.30322Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 				<path
 					d="M19.862 9.97137L17.1455 7.65015V2.44649C17.1455 2.32753 17.1083 2.2297 17.0336 2.15313C16.9596 2.07666 16.8644 2.03842 16.7485 2.03842H14.3667C14.2508 2.03842 14.1557 2.07666 14.0812 2.15313C14.0069 2.2297 13.9697 2.32758 13.9697 2.44649V4.93349L10.9429 2.3316C10.6786 2.11052 10.3642 2 10.0003 2C9.6364 2 9.32212 2.11052 9.05751 2.3316L0.137848 9.97137C0.0551625 10.0393 0.00984396 10.1307 0.00141463 10.2455C-0.00697125 10.3602 0.0219231 10.4604 0.0881846 10.5454L0.857296 11.4892C0.923557 11.5657 1.01028 11.6124 1.11782 11.6295C1.21711 11.6381 1.31639 11.6083 1.41567 11.5403L10 4.181L18.5845 11.5402C18.6508 11.5996 18.7375 11.6292 18.845 11.6292H18.8823C18.9897 11.6124 19.0762 11.5653 19.1428 11.489L19.912 10.5453C19.9781 10.4602 20.0071 10.3601 19.9985 10.2453C19.99 10.1308 19.9446 10.0394 19.862 9.97137Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 			</symbol>
 
 			<symbol id="inventory-icon">
 				<path
 					d="M9.24837 11.4583C9.24837 11.1141 8.96587 10.8333 8.62152 10.8333H5.48732V13.3333C5.48732 13.7933 5.11288 14.1666 4.65153 14.1666C4.19017 14.1666 3.81574 13.7933 3.81574 13.3333V10.8333H0.681529C0.336348 10.8333 0.0546875 11.1141 0.0546875 11.4583V19.3749C0.0546875 19.7191 0.336348 19.9999 0.681529 19.9999H8.62152C8.96587 19.9999 9.24837 19.7191 9.24837 19.3749V11.4583Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 				<path
 					d="M20.1126 11.4583C20.1126 11.1141 19.8301 10.8333 19.4858 10.8333H16.3516V13.3333C16.3516 13.7933 15.9771 14.1666 15.5158 14.1666C15.0544 14.1666 14.68 13.7933 14.68 13.3333V10.8333H11.5458C11.2006 10.8333 10.9189 11.1141 10.9189 11.4583V19.3749C10.9189 19.7191 11.2006 19.9999 11.5458 19.9999H19.4858C19.8301 19.9999 20.1126 19.7191 20.1126 19.3749V11.4583Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 				<path
 					d="M14.682 0.625C14.682 0.281667 14.3995 0 14.0551 0H10.9209V2.5C10.9209 2.96 10.5465 3.33334 10.0851 3.33334C9.62376 3.33334 9.24933 2.96 9.24933 2.5V0H6.11512C5.76994 0 5.48828 0.281667 5.48828 0.625V8.54167C5.48828 8.88584 5.76994 9.16667 6.11512 9.16667H14.0551C14.3995 9.16667 14.682 8.88584 14.682 8.54167V0.625Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 			</symbol>
 
 			<symbol id="management-icon">
 				<path
 					d="M13.0123 2.1875H11.7417C11.5006 1.49637 10.8501 1 10.0872 1C9.32438 1 8.67384 1.49637 8.43164 2.1875H7.16216C6.83923 2.1875 6.57715 2.4535 6.57715 2.78125V5.15625C6.57715 5.484 6.83923 5.75 7.16216 5.75H13.0123C13.3352 5.75 13.5973 5.484 13.5973 5.15625V2.78125C13.5973 2.4535 13.3352 2.1875 13.0123 2.1875Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 				<path
 					d="M15.9338 3.375H14.7638V5.15625C14.7638 6.13831 13.9763 6.9375 13.0087 6.9375H7.15858C6.19096 6.9375 5.40353 6.13831 5.40353 5.15625V3.375H4.23351C3.58882 3.375 3.06348 3.90819 3.06348 4.5625V18.8125C3.06348 19.4787 3.57712 20 4.23351 20H15.9338C16.5902 20 17.1038 19.4787 17.1038 18.8125V4.5625C17.1038 3.89631 16.5902 3.375 15.9338 3.375ZM9.91283 13.8891L7.57277 16.2641C7.45811 16.3793 7.30834 16.4375 7.15858 16.4375C7.00881 16.4375 6.85905 16.3793 6.74439 16.2641L5.57436 15.0766C5.3462 14.8451 5.3462 14.4686 5.57436 14.2371C5.80251 14.0055 6.17341 14.0055 6.40157 14.2371L7.15858 15.0042L9.08444 13.0496C9.3126 12.818 9.6835 12.818 9.91166 13.0496C10.1398 13.2811 10.141 13.6564 9.91283 13.8891ZM9.91283 9.13912L7.57277 11.5141C7.45811 11.6293 7.30834 11.6875 7.15858 11.6875C7.00881 11.6875 6.85905 11.6293 6.74439 11.5141L5.57436 10.3266C5.3462 10.0951 5.3462 9.71862 5.57436 9.48706C5.80251 9.2555 6.17341 9.2555 6.40157 9.48706L7.15858 10.2542L9.08444 8.29956C9.3126 8.068 9.6835 8.068 9.91166 8.29956C10.1398 8.53112 10.141 8.90637 9.91283 9.13912ZM14.1788 15.25H11.8387C11.5158 15.25 11.2537 14.984 11.2537 14.6562C11.2537 14.3285 11.5158 14.0625 11.8387 14.0625H14.1788C14.5017 14.0625 14.7638 14.3285 14.7638 14.6562C14.7638 14.984 14.5017 15.25 14.1788 15.25ZM14.1788 10.5H11.8387C11.5158 10.5 11.2537 10.234 11.2537 9.90625C11.2537 9.5785 11.5158 9.3125 11.8387 9.3125H14.1788C14.5017 9.3125 14.7638 9.5785 14.7638 9.90625C14.7638 10.234 14.5017 10.5 14.1788 10.5Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 			</symbol>
 
 			<symbol id="archive-icon">
 				<path
 					d="M16.8744 6.6665H3.29691C3.12965 6.6665 2.98499 6.73243 2.86289 6.8644C2.74072 6.99629 2.67969 7.15256 2.67969 7.33312V17.3331C2.67969 17.5136 2.74072 17.67 2.86289 17.8018C2.98499 17.9338 3.12965 17.9998 3.29691 17.9998H16.8744C17.0415 17.9998 17.1861 17.9338 17.3083 17.8018C17.4304 17.67 17.4914 17.5136 17.4914 17.3331V7.33312C17.4914 7.15245 17.4306 6.99633 17.3083 6.8644C17.1862 6.73243 17.0415 6.6665 16.8744 6.6665ZM11.7537 9.80188C11.6316 9.93381 11.4869 9.99978 11.3198 9.99978H8.85112C8.68407 9.99978 8.53941 9.93378 8.41721 9.80188C8.29511 9.66992 8.23401 9.51372 8.23401 9.33305C8.23401 9.15252 8.29511 8.99626 8.41721 8.86433C8.53937 8.73236 8.68404 8.66636 8.85112 8.66636H11.32C11.487 8.66636 11.6316 8.73236 11.7539 8.86433C11.876 8.99622 11.937 9.15248 11.937 9.33305C11.937 9.51369 11.8758 9.66992 11.7537 9.80188Z"
-					fill="#233235"
+					fill="currentColor"
 				/>
 				<path
 					d="M17.9236 2.19789C17.8014 2.06593 17.6568 2 17.4896 2H2.6777C2.51057 2 2.36591 2.06593 2.24378 2.19789C2.12165 2.32979 2.06055 2.48605 2.06055 2.66662V5.33327C2.06055 5.5138 2.12165 5.66999 2.24381 5.802C2.36595 5.93396 2.51057 5.99989 2.67773 5.99989H17.4894C17.6566 5.99989 17.8013 5.93396 17.9236 5.802C18.0456 5.67003 18.1067 5.51384 18.1067 5.33327V2.66662C18.1067 2.48594 18.0456 2.32979 17.9236 2.19789Z"
-					fill="#233235"
+					fill="currentColor"
+				/>
+			</symbol>
+
+			<symbol id="resize-arrow">
+				<path
+					d="M21 7.875H3.99L9.87 1.575L8.4 0L0 9L8.4 18L9.87 16.425L3.99 10.125H21V7.875Z"
+					fill="currentColor"
 				/>
 			</symbol>
 		</svg>
