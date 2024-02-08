@@ -38,6 +38,12 @@ body {
 	background: #efe9e8;
 	overflow: hidden;
 	transition: width 200ms ease-in-out;
+	container-type: inline-size;
+	container-name: admin-dashboard-nav;
+
+	&.open {
+		width: 350px;
+	}
 
 	& ul {
 		list-style-type: none;
@@ -185,6 +191,9 @@ body {
 	margin-bottom: 20px;
 
 	& .admin-dashboard__nav-resize-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		color: #233235;
 		padding: 0;
 		background: #fff;
@@ -192,13 +201,20 @@ body {
 		border-radius: 50%;
 		height: 35px;
 		width: 35px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		cursor: pointer;
+		transition: all 100ms ease-in-out;
 
 		& svg {
 			width: 21px;
 			height: 18px;
+			transform: rotate(180deg);
+			transition: transform 1024px00ms ease-in-out;
+		}
+
+		&:hover {
+			background: rgba(241, 215, 204, 1);
+			border-color: rgba(241, 215, 204, 1);
+			color: #000;
 		}
 	}
 }
@@ -225,12 +241,17 @@ body {
 }
 
 @media (min-width: 1024px) {
-	.admin-dashboard__nav {
-		width: 350px;
-	}
+}
 
+@container admin-dashboard-nav (width > 61px) {
 	.admin-dashboard__nav-resize-container {
 		justify-content: flex-end;
 		padding-right: 20px;
+
+		& .admin-dashboard__nav-resize-button {
+			& svg {
+				transform: rotate(0deg);
+			}
+		}
 	}
 }

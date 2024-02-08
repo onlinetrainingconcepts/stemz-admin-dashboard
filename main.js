@@ -2,11 +2,17 @@ class AdminDashboard {
 	constructor(dashboard, defaultTabIndex) {
 		this.dashboard = dashboard;
 		this.nav = this.dashboard.querySelector('.admin-dashboard__nav');
-		this.navButtons = this.dashboard.querySelectorAll('.dashboard__button');
-		this.contentContainer = this.dashboard.querySelector(
-			'.admin-dashboard__content'
-		);
+
+		// this.navButtons = this.dashboard.querySelectorAll('.dashboard__button');
+		// this.contentContainer = this.dashboard.querySelector(
+		// 	'.admin-dashboard__content'
+		// );
 		this.defaultTabIndex = defaultTabIndex;
+
+		// document.addEventListener(
+		// 	'DOMContentLoaded',
+		// 	this.initiateDashboard(this.nav)
+		// );
 
 		document.addEventListener(
 			'DOMContentLoaded',
@@ -14,9 +20,20 @@ class AdminDashboard {
 		);
 
 		// ensures default content shows on load
-		this.navButtons[this.defaultTabIndex].click();
+		// this.navButtons[this.defaultTabIndex].click();
 	}
 
+	initiateDashboard(nav) {
+		const navResizeButton = nav.querySelector(
+			'.admin-dashboard__nav-resize-button'
+		);
+		if (window.innerWidth >= 1024) {
+			nav.classList.add('open');
+		}
+		navResizeButton.addEventListener('click', () => {
+			nav.classList.toggle('open');
+		});
+	}
 	// removeClassAll(group, item, classToRemove) {
 	// 	group.querySelectorAll(item).forEach((i) => {
 	// 		i.classList.remove(classToRemove);
