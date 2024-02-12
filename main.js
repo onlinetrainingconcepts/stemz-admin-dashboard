@@ -57,12 +57,14 @@ class AdminDashboard {
 	}
 
 	navResizeButtonHandler(nav) {
-		/*
-		if nav is closed and an accordion is open
-		remove open class from open accordion
-		*/
 		const openAccordion = nav.querySelector('.accordion-content.open');
-		if (!nav.classList.contains('open') && openAccordion) {
+
+		/*
+		if nav and accordion are open
+		remove open class from open accordion
+		to prevent accordion staying open when nav closes
+		*/
+		if (nav.classList.contains('open') && openAccordion) {
 			this.removeClass(openAccordion, 'open');
 		}
 
@@ -70,7 +72,97 @@ class AdminDashboard {
 	}
 
 	primaryButtonHandler(nav, button) {
+		const accordionContent = button.nextElementSibling;
+
+		// logic for if button has accordion content
+		if (accordionContent) {
+			// open state
+			if (nav.classList.contains('open')) {
+				const firstSecondaryButton = accordionContent.querySelector(
+					'.dashboard__button.secondary'
+				);
+				// removes active state from all accordions
+				this.removeClassAll(nav, '.accordion-content', 'active');
+				// ensures first secondary button runs logic
+				firstSecondaryButton.click();
+			}
+
+			// closed state
+			if (!nav.classList.contains('open')) {
+				accordionContent.classList.toggle('open');
+			}
+		} else {
+			// removes active class from all primary buttons
+			this.removeClassAll(nav, '.dashboard__button.primary', 'active');
+			// removes active class from all secondary buttons
+			this.removeClassAll(nav, '.dashboard__button.active', 'active');
+			// removes active classes from all accordions
+			this.removeClassAll(nav, '.accordion-content', 'active');
+			// closes any open accordions
+			this.removeClassAll(nav, '.accordion-content', 'open');
+			// adds active class to current button
+			this.addClass(button, 'active');
+			// runs data handler
+			this.dataHandler(button);
+		}
+	}
+
+	secondaryButtonHandler(nav, button) {
+		const parentAcordion = button.parentElement.parentElement;
+		const primaryButton = parentAcordion.previousElementSibling;
+
+		// removes active class from all primary buttons
 		this.removeClassAll(nav, '.dashboard__button.primary', 'active');
+		// removes active class from all secondary buttons
+		this.removeClassAll(nav, '.dashboard__button.secondary', 'active');
+		// removes active class from all accordion content
+		this.removeClassAll(nav, '.accordion-content', 'active');
+		// adds active class to current button
+		this.addClass(button, 'active');
+		// adds active class to current accordion
+		this.addClass(parentAcordion, 'active');
+		// add an active class to primary button
+		this.addClass(primaryButton, 'active');
+		// run data handler for current button
+		this.dataHandler(button);
+
+		if (!nav.classList.contains('open')) {
+			this.removeClass(parentAcordion, 'open');
+		}
+	}
+
+	addClass(item, classToAdd) {
+		item.classList.add(classToAdd);
+	}
+
+	removeClass(item, classToRemove) {
+		item.classList.remove(classToRemove);
+	}
+
+	removeClassAll(group, item, classToRemove) {
+		group.querySelectorAll(item).forEach((i) => {
+			this.removeClass(i, classToRemove);
+		});
+	}
+
+	dataHandler(i) {
+		const dataAttribute = i.dataset.forTab;
+
+		this.removeClassAll(this.dashboard, '.tabcontent', 'active');
+		this.tabcontent.forEach((tab) => {
+			if (tab.dataset.tab === dataAttribute) {
+				this.addClass(tab, 'active');
+			}
+		});
+	}
+
+	primaryButtonHandlerOLD(nav, button) {
+		// remove all active classes from primary buttons
+		// add an active class to current button
+
+		// if button has accordion content, add open class to
+		this.removeClassAll(nav, '.dashboard__button.primary', 'active');
+		this.removeClassAll(nav, '.accordion-content', 'active');
 
 		/*
 		if check determines whether or not
@@ -80,13 +172,17 @@ class AdminDashboard {
 			const accordionContent = button.nextElementSibling;
 			const firstAccordionButton = accordionContent.querySelector('.secondary');
 
+			this.addClass(accordionContent, 'active');
+
+			// open nav actions
+			if (nav.classList.contains('open')) {
+				this.addClass(accordionContent, 'open');
+				firstAccordionButton.click();
+			}
+
 			// closed nav actions
 			if (!nav.classList.contains('open')) {
 				accordionContent.classList.toggle('open');
-			}
-			// open nav actions
-			if (nav.classList.contains('open')) {
-				firstAccordionButton.click();
 			}
 		} else {
 			this.removeClassAll(nav, '.dashboard__button.secondary', 'active');
@@ -96,7 +192,7 @@ class AdminDashboard {
 		this.addClass(button, 'active');
 	}
 
-	secondaryButtonHandler(nav, button) {
+	secondaryButtonHandlerOLD(nav, button) {
 		const accordionContainer = button.parentElement.parentElement;
 		const associatedPrimaryButton = accordionContainer.previousElementSibling;
 
@@ -119,32 +215,6 @@ class AdminDashboard {
 		this.addClass(button, 'active');
 
 		this.dataHandler(button);
-	}
-
-	addClass(item, classToAdd) {
-		item.classList.add(classToAdd);
-	}
-
-	removeClass(item, classToRemove) {
-		item.classList.remove(classToRemove);
-	}
-
-	removeClassAll(group, item, classToRemove) {
-		group.querySelectorAll(item).forEach((i) => {
-			this.removeClass(i, classToRemove);
-		});
-	}
-
-	dataHandler(i) {
-		const dataAttribute = i.dataset.forTab;
-
-		this.removeClassAll(this.dashboard, '.tabcontent', 'active');
-		this.tabcontent.forEach((tab) => {
-			console.log(tab.dataset.tab);
-			if (tab.dataset.tab === dataAttribute) {
-				this.addClass(tab, 'active');
-			}
-		});
 	}
 
 	// navButtonHandler(button) {
