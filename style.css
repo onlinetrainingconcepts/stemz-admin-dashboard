@@ -76,6 +76,15 @@ body {
 	padding: 50px;
 	flex: 1;
 	overflow-y: auto;
+
+	/* ## tab content */
+	& .tabcontent {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
 }
 
 /* # buttons and interactions */

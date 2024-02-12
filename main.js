@@ -2,6 +2,9 @@ class AdminDashboard {
 	constructor(dashboard, defaultTabIndex) {
 		this.dashboard = dashboard;
 		this.nav = this.dashboard.querySelector('.admin-dashboard__nav');
+		this.tabcontent = Array.from(
+			this.dashboard.querySelectorAll('.tabcontent')
+		);
 
 		// this.navButtons = this.dashboard.querySelectorAll('.dashboard__button');
 		// this.contentContainer = this.dashboard.querySelector(
@@ -69,20 +72,25 @@ class AdminDashboard {
 	primaryButtonHandler(nav, button) {
 		this.removeClassAll(nav, '.dashboard__button.primary', 'active');
 
-		// closed nav actions
-		if (!nav.classList.contains('open')) {
-			if (button.nextElementSibling) {
-				button.nextElementSibling.classList.toggle('open');
-			}
-		}
+		/*
+		if check determines whether or not
+		button has accordion content
+		*/
+		if (button.nextElementSibling) {
+			const accordionContent = button.nextElementSibling;
+			const firstAccordionButton = accordionContent.querySelector('.secondary');
 
-		// open nav actions
-		if (nav.classList.contains('open')) {
-			if (button.nextElementSibling) {
-				const firstAccordionButton =
-					button.nextElementSibling.querySelector('.secondary');
+			// closed nav actions
+			if (!nav.classList.contains('open')) {
+				accordionContent.classList.toggle('open');
+			}
+			// open nav actions
+			if (nav.classList.contains('open')) {
 				firstAccordionButton.click();
 			}
+		} else {
+			this.removeClassAll(nav, '.dashboard__button.secondary', 'active');
+			this.dataHandler(button);
 		}
 
 		this.addClass(button, 'active');
@@ -98,9 +106,7 @@ class AdminDashboard {
 		}
 
 		// open nav actions
-		if (nav.classList.contains('open')) {
-			// console.log(button);
-		}
+		// n/a
 
 		/*
 		removes active classes from all primary buttons
@@ -108,20 +114,36 @@ class AdminDashboard {
 		with secondary button
 		*/
 		this.removeClassAll(nav, '.dashboard__button.primary', 'active');
+		this.removeClassAll(nav, '.dashboard__button.secondary', 'active');
 		this.addClass(associatedPrimaryButton, 'active');
-	}
+		this.addClass(button, 'active');
 
-	removeClass(item, classToRemove) {
-		item.classList.remove(classToRemove);
+		this.dataHandler(button);
 	}
 
 	addClass(item, classToAdd) {
 		item.classList.add(classToAdd);
 	}
 
+	removeClass(item, classToRemove) {
+		item.classList.remove(classToRemove);
+	}
+
 	removeClassAll(group, item, classToRemove) {
 		group.querySelectorAll(item).forEach((i) => {
 			this.removeClass(i, classToRemove);
+		});
+	}
+
+	dataHandler(i) {
+		const dataAttribute = i.dataset.forTab;
+
+		this.removeClassAll(this.dashboard, '.tabcontent', 'active');
+		this.tabcontent.forEach((tab) => {
+			console.log(tab.dataset.tab);
+			if (tab.dataset.tab === dataAttribute) {
+				this.addClass(tab, 'active');
+			}
 		});
 	}
 
