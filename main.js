@@ -9,11 +9,6 @@ class AdminDashboard {
 		// );
 		this.defaultTabIndex = defaultTabIndex;
 
-		// document.addEventListener(
-		// 	'DOMContentLoaded',
-		// 	this.initiateDashboard(this.nav)
-		// );
-
 		document.addEventListener(
 			'DOMContentLoaded',
 			this.initiateDashboard(this.nav)
@@ -27,26 +22,108 @@ class AdminDashboard {
 		const navResizeButton = nav.querySelector(
 			'.admin-dashboard__nav-resize-button'
 		);
+
+		const primaryNavButtons = nav.querySelectorAll(
+			'.dashboard__button.primary'
+		);
+
+		const secondaryNavButtons = nav.querySelectorAll(
+			'.dashboard__button.secondary'
+		);
+
+		// refactor later to watch for window size changes
 		if (window.innerWidth >= 1024) {
 			nav.classList.add('open');
 		}
-		navResizeButton.addEventListener('click', () => {
-			nav.classList.toggle('open');
+
+		navResizeButton.addEventListener('click', () =>
+			this.navResizeButtonHandler(nav)
+		);
+
+		primaryNavButtons.forEach((button) => {
+			button.addEventListener('click', () =>
+				this.primaryButtonHandler(nav, button)
+			);
+		});
+
+		secondaryNavButtons.forEach((button) => {
+			button.addEventListener('click', () =>
+				this.secondaryButtonHandler(nav, button)
+			);
 		});
 	}
-	// removeClassAll(group, item, classToRemove) {
-	// 	group.querySelectorAll(item).forEach((i) => {
-	// 		i.classList.remove(classToRemove);
-	// 	});
-	// }
 
-	// removeClass(item, classToRemove) {
-	// 	item.classList.remove(classToRemove);
-	// }
+	navResizeButtonHandler(nav) {
+		/*
+		if nav is closed and an accordion is open
+		remove open class from open accordion
+		*/
+		const openAccordion = nav.querySelector('.accordion-content.open');
+		if (!nav.classList.contains('open') && openAccordion) {
+			this.removeClass(openAccordion, 'open');
+		}
 
-	// addClass(item, classToAdd) {
-	// 	item.classList.add(classToAdd);
-	// }
+		nav.classList.toggle('open');
+	}
+
+	primaryButtonHandler(nav, button) {
+		this.removeClassAll(nav, '.dashboard__button.primary', 'active');
+
+		// closed nav actions
+		if (!nav.classList.contains('open')) {
+			if (button.nextElementSibling) {
+				button.nextElementSibling.classList.toggle('open');
+			}
+		}
+
+		// open nav actions
+		if (nav.classList.contains('open')) {
+			if (button.nextElementSibling) {
+				const firstAccordionButton =
+					button.nextElementSibling.querySelector('.secondary');
+				firstAccordionButton.click();
+			}
+		}
+
+		this.addClass(button, 'active');
+	}
+
+	secondaryButtonHandler(nav, button) {
+		const accordionContainer = button.parentElement.parentElement;
+		const associatedPrimaryButton = accordionContainer.previousElementSibling;
+
+		// closed nav actions
+		if (!nav.classList.contains('open')) {
+			this.removeClass(accordionContainer, 'open');
+		}
+
+		// open nav actions
+		if (nav.classList.contains('open')) {
+			// console.log(button);
+		}
+
+		/*
+		removes active classes from all primary buttons
+		and assigns active class to the button associated
+		with secondary button
+		*/
+		this.removeClassAll(nav, '.dashboard__button.primary', 'active');
+		this.addClass(associatedPrimaryButton, 'active');
+	}
+
+	removeClass(item, classToRemove) {
+		item.classList.remove(classToRemove);
+	}
+
+	addClass(item, classToAdd) {
+		item.classList.add(classToAdd);
+	}
+
+	removeClassAll(group, item, classToRemove) {
+		group.querySelectorAll(item).forEach((i) => {
+			this.removeClass(i, classToRemove);
+		});
+	}
 
 	// navButtonHandler(button) {
 	// 	let accordionContent;
