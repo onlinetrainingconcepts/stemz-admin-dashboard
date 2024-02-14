@@ -15,13 +15,9 @@ class AdminDashboard {
 		// );
 		this.defaultTabIndex = defaultTabIndex;
 
-		document.addEventListener(
-			'DOMContentLoaded',
+		document.addEventListener('DOMContentLoaded', () =>
 			this.initiateDashboard(this.nav)
 		);
-
-		// ensures default content shows on load
-		// this.navButtons[this.defaultTabIndex].click();
 	}
 
 	initiateDashboard(nav) {
@@ -37,15 +33,6 @@ class AdminDashboard {
 			'.dashboard__button.secondary'
 		);
 
-		// refactor later to watch for window size changes
-		if (window.innerWidth >= 1024) {
-			nav.classList.add('open');
-		}
-
-		navResizeButton.addEventListener('click', () =>
-			this.navResizeButtonHandler(nav)
-		);
-
 		primaryNavButtons.forEach((button) => {
 			button.addEventListener('click', () =>
 				this.primaryButtonHandler(nav, button)
@@ -58,8 +45,29 @@ class AdminDashboard {
 			);
 		});
 
+		navResizeButton.addEventListener('click', () =>
+			this.navResizeButtonHandler(nav)
+		);
+
+		// ensures nav is open on page load when screen size is large
+		if (window.innerWidth >= 1024) {
+			nav.classList.add('open');
+		}
+
+		window.addEventListener('resize', () => this.resizeWindowHandler(this.nav));
+
 		// ensures default tab is selected when page loads
 		this.primaryButtons[this.defaultTabIndex].click();
+	}
+
+	resizeWindowHandler(nav) {
+		if (window.innerWidth <= 1024) {
+			this.removeClass(nav, 'open');
+		}
+
+		if (window.innerWidth >= 1024) {
+			this.addClass(nav, 'open');
+		}
 	}
 
 	navResizeButtonHandler(nav) {
