@@ -276,15 +276,15 @@ body {
 @container admin-dashboard-nav (width > 61px) {
 	.admin-dashboard__nav {
 		& .accordion-content {
-			height: 0;
+			max-height: 0;
 			width: 100%;
 			position: static;
 			left: auto;
 			top: auto;
-			transition: height 2000ms ease-in-out;
+			transition: max-height 400ms ease-in-out;
 
 			&.active {
-				height: max-content;
+				max-height: 500px;
 			}
 		}
 
