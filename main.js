@@ -2,17 +2,10 @@ class AdminDashboard {
 	constructor(dashboard, defaultTabIndex) {
 		this.dashboard = dashboard;
 		this.nav = this.dashboard.querySelector('.admin-dashboard__nav');
-		this.primaryButtons = this.nav.querySelectorAll(
-			'.dashboard__button.primary'
-		);
 		this.tabcontent = Array.from(
 			this.dashboard.querySelectorAll('.tabcontent')
 		);
 
-		// this.navButtons = this.dashboard.querySelectorAll('.dashboard__button');
-		// this.contentContainer = this.dashboard.querySelector(
-		// 	'.admin-dashboard__content'
-		// );
 		this.defaultTabIndex = defaultTabIndex;
 
 		document.addEventListener('DOMContentLoaded', () =>
@@ -57,7 +50,7 @@ class AdminDashboard {
 		window.addEventListener('resize', () => this.resizeWindowHandler(this.nav));
 
 		// ensures default tab is selected when page loads
-		this.primaryButtons[this.defaultTabIndex].click();
+		primaryNavButtons[this.defaultTabIndex].click();
 	}
 
 	resizeWindowHandler(nav) {
