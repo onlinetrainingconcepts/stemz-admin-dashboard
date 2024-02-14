@@ -2,6 +2,9 @@ class AdminDashboard {
 	constructor(dashboard, defaultTabIndex) {
 		this.dashboard = dashboard;
 		this.nav = this.dashboard.querySelector('.admin-dashboard__nav');
+		this.primaryButtons = this.nav.querySelectorAll(
+			'.dashboard__button.primary'
+		);
 		this.tabcontent = Array.from(
 			this.dashboard.querySelectorAll('.tabcontent')
 		);
@@ -54,6 +57,9 @@ class AdminDashboard {
 				this.secondaryButtonHandler(nav, button)
 			);
 		});
+
+		// ensures default tab is selected when page loads
+		this.primaryButtons[this.defaultTabIndex].click();
 	}
 
 	navResizeButtonHandler(nav) {
