@@ -47,7 +47,7 @@ class AdminDashboard {
 			nav.classList.add('open');
 		}
 
-		window.addEventListener('resize', () => this.resizeWindowHandler(this.nav));
+		window.addEventListener('resize', () => this.resizeWindowHandler(nav));
 
 		// ensures default tab is selected when page loads
 		primaryNavButtons[this.defaultTabIndex].click();
