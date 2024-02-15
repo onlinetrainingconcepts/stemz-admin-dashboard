@@ -203,8 +203,14 @@ body {
 		}
 	}
 
+	/* ### hover styles */
+	&:hover {
+		color: #233235;
+	}
+
 	/* ### focus styles */
 	&:focus {
+		color: #233235;
 		outline: none;
 	}
 
