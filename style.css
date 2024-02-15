@@ -97,6 +97,7 @@ body {
 	height: 46px;
 	width: 100%;
 	border: none;
+	border-radius: 0;
 	color: #233235;
 	font-family: 'DM Sans', sans-serif;
 	font-size: 16px;
