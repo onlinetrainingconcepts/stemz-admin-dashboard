@@ -56,7 +56,7 @@ body {
 
 	& .accordion-content {
 		position: absolute;
-		left: -200%;
+		left: -210%;
 		top: 0;
 		width: max-content;
 		transition: left 200ms ease-in-out;
