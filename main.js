@@ -96,7 +96,17 @@ class AdminDashboard {
 
 			// closed state
 			if (!nav.classList.contains('open')) {
-				accordionContent.classList.toggle('open');
+				/*
+				if user selcts nav button not open, close open accordion
+				else toggle accorion open state
+				prevents two accordions to be open at once
+				*/
+				if (!accordionContent.classList.contains('open')) {
+					this.removeClassAll(nav, '.accordion-content', 'open');
+					this.addClass(accordionContent, 'open');
+				} else {
+					accordionContent.classList.toggle('open');
+				}
 			}
 		} else {
 			// removes active class from all primary buttons
