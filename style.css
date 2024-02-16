@@ -78,6 +78,7 @@ body {
 	/* ## tab content */
 	& .tabcontent {
 		display: none;
+		padding: 0;
 
 		&.active {
 			display: block;
