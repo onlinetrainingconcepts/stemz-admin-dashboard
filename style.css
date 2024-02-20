@@ -252,7 +252,7 @@ body {
 			width: 21px;
 			height: 18px;
 			transform: rotate(180deg);
-			transition: transform 1024px00ms ease-in-out;
+			transition: transform 100ms ease-in-out;
 		}
 
 		&:hover {
