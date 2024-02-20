@@ -260,6 +260,10 @@ body {
 			border-color: rgba(241, 215, 204, 1);
 			color: #000;
 		}
+
+		&:focus {
+			outline: 2px solid rgba(0, 125, 122, 1);
+		}
 	}
 }
 
