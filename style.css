@@ -7,14 +7,16 @@ body:has(.admin-dashboard) {
 	height: 100% !important;
 }
 
-body {
+body:has(.admin-dashboard) {
 	margin: 0;
 	padding: 0;
 	font-family: 'DM Sans', sans-serif;
 }
 
-.container:has(.admin-dashboard) {
+.admin-dashboard__container-main {
 	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .admin-dashboard * {
@@ -27,18 +29,17 @@ body {
 	height: 100%;
 }
 
-/* ## dashboard nav */
+/* # nav bar */
 
 .admin-dashboard__nav {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	width: 61px;
 	height: 100%;
-	background: #efe9e8;
-	transition: width 200ms ease-in-out;
+	width: 61px;
+	background: rgba(239, 233, 232, 1);
 	container-type: inline-size;
 	container-name: admin-dashboard-nav;
+	transition: width 200ms ease-in-out;
 
 	&.open {
 		width: 350px;
@@ -67,28 +68,9 @@ body {
 	}
 }
 
-/* ## dashboard content */
+/* ## buttons & interactions */
 
-.admin-dashboard__content {
-	background-color: #fff;
-	padding: 50px;
-	flex: 1;
-	overflow-y: auto;
-
-	/* ## tab content */
-	& .tabcontent {
-		display: none;
-		padding: 0;
-
-		&.active {
-			display: block;
-		}
-	}
-}
-
-/* # buttons and interactions */
-
-/* ## main nav buttons */
+/* ### all buttons */
 
 .dashboard__button {
 	display: flex;
@@ -104,8 +86,8 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	cursor: pointer;
-	position: relative;
 	text-wrap: nowrap;
+	position: relative;
 
 	& svg {
 		width: 21px;
@@ -113,18 +95,23 @@ body {
 		position: absolute;
 	}
 
-	/* ## main buttons */
+	/* ### main buttons */
 
 	&.primary {
 		background-color: #efe9e8;
-		position: relative;
 		overflow: hidden;
 		z-index: 50;
+		/* position: relative; */
 
-		/* ### active styles */
+		& span {
+			margin-left: 41px;
+			text-wrap: nowrap;
+			opacity: 0;
+		}
 
 		&.active {
 			background-color: rgba(184, 209, 209, 1);
+			color: #233235;
 
 			/* adds border to active class */
 			&:before {
@@ -152,14 +139,6 @@ body {
 			}
 		}
 
-		& span {
-			margin-left: 41px;
-			text-wrap: nowrap;
-			opacity: 0;
-		}
-
-		/* ### hover styles */
-
 		&:hover:not(.active) {
 			background-color: rgba(251, 245, 242, 1);
 
@@ -175,12 +154,10 @@ body {
 		}
 	}
 
-	/* ## accordion buttons */
+	/* ### accordion buttons */
 
 	&.secondary {
 		background-color: rgba(229, 241, 241, 1);
-
-		/* ### active styles */
 
 		&.active {
 			background-color: rgba(211, 234, 234, 1);
@@ -197,8 +174,6 @@ body {
 			}
 		}
 
-		/* ### hover styles */
-
 		&:hover:before {
 			content: '';
 			width: 6px;
@@ -209,42 +184,35 @@ body {
 		}
 	}
 
-	/* ### hover styles */
-
 	&:hover {
 		color: #233235;
 	}
-
-	/* ### focus styles */
 
 	&:focus {
 		color: #233235;
 		outline: none;
 	}
-
-	&:focus-visible {
-		outline: 2px solid #007d7a;
-		z-index: 100;
-	}
 }
 
+/* ### resize button */
+
 .admin-dashboard__nav-resize-container {
-	width: 100%;
 	display: flex;
 	justify-content: center;
+	margin-top: auto;
 	margin-bottom: 20px;
 
 	& .admin-dashboard__nav-resize-button {
+		background: #fff;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: #233235;
 		padding: 0;
-		background: #fff;
 		border: 2px solid rgba(104, 104, 104, 1);
 		border-radius: 50%;
 		height: 35px;
 		width: 35px;
+		color: #233235;
 		cursor: pointer;
 		transition: all 100ms ease-in-out;
 
@@ -267,8 +235,27 @@ body {
 	}
 }
 
-@media (min-width: 1024px) {
+/* # main content */
+
+.admin-dashboard__content {
+	height: 100%;
+	flex: 1;
+	padding: 30px;
+	background: #fff;
+	overflow-y: auto;
+
+	/* ## tab content */
+	& .tabcontent {
+		display: none;
+		padding: 0;
+
+		&.active {
+			display: block;
+		}
+	}
 }
+
+/* # container queries */
 
 @container admin-dashboard-nav (width > 61px) {
 	.admin-dashboard__nav {
@@ -304,10 +291,16 @@ body {
 		justify-content: flex-end;
 		padding-right: 20px;
 
-		& .admin-dashboard__nav-resize-button {
-			& svg {
-				transform: rotate(0deg);
-			}
+		& .admin-dashboard__nav-resize-button svg {
+			transform: rotate(0deg);
 		}
+	}
+}
+
+/* # media queries */
+
+@media screen and (min-width: 768px) {
+	.admin-dashboard__content {
+		padding: 50px;
 	}
 }
