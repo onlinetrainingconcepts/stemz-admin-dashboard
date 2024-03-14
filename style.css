@@ -70,6 +70,14 @@ body:has(.admin-dashboard) {
 	}
 }
 
+.nav-shroud {
+	width: 100%;
+	flex: 1;
+	background: rgba(239, 233, 232, 1);
+	position: relative;
+	z-index: 100;
+}
+
 /* ## buttons & interactions */
 
 /* ### all buttons */
