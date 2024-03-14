@@ -62,20 +62,22 @@ body:has(.admin-dashboard) {
 		left: -200%;
 		transform: translateX(-100%);
 		transition: all 200ms ease-in-out;
+		z-index: -5;
 
 		&.open {
 			left: 100%;
 			transform: translateX(0%);
 		}
 	}
-}
 
-.nav-shroud {
-	width: 100%;
-	flex: 1;
-	background: rgba(239, 233, 232, 1);
-	position: relative;
-	z-index: 100;
+	&:after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		background: rgba(239, 233, 232, 1);
+		position: absolute;
+		z-index: -1;
+	}
 }
 
 /* ## buttons & interactions */
