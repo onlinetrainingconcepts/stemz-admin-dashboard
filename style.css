@@ -57,14 +57,26 @@ body:has(.admin-dashboard) {
 
 	& .accordion-content {
 		position: absolute;
-		left: -210%;
-		top: 0;
 		width: max-content;
-		transition: left 200ms ease-in-out;
+		top: 0;
+		left: -200%;
+		transform: translateX(-100%);
+		transition: all 200ms ease-in-out;
+		z-index: -5;
 
 		&.open {
 			left: 100%;
+			transform: translateX(0%);
 		}
+	}
+
+	&:after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		background: rgba(239, 233, 232, 1);
+		position: absolute;
+		z-index: -1;
 	}
 }
 
@@ -265,6 +277,7 @@ body:has(.admin-dashboard) {
 			position: static;
 			left: auto;
 			top: auto;
+			transform: initial;
 			transition: max-height 400ms ease-in-out;
 
 			&.active {
